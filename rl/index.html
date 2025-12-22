@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content=Georgia Tech OMSCS CS 7642 Reinforcement Learning course review, homework, exam, project, grading name='description'/>
+  <title>Review of OMSCS CS 7642 Reinforcement Learning</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+    <!--  <a href="#" class="back">←</a> -->
+
+      <span class="header-title"><a href="https://etlq.github.io/">My review of everything</a></span>
+
+      <nav class="menu">
+    <!-- 
+        <a href="#admission">Admission</a> 
+        <a href="#courses">Courses</a> 
+        <a href="#thoughts">Thoughts</a> 
+    -->
+      <button id="themeToggle" class="theme-toggle">
+        🌙 Dark
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="courses">
+
+<h1>My Review of RL (CS7642) Reinforcement Learning</h1>
+
+<pre>
+           Grade: A 
+      Difficulty: 7/10 
+          Rating: 10/10 
+ Time Commitment: 12 hours/week 
+-------------------------------
+</pre>
+<br>
+
+<h2>Overall</h2>
+
+This is a well organized course with an instructor who has been teaching this course for many years. It's essentially a sequel to ML (CS7641). 
+<br><br>
+
+<h2>Lecture quality</h2>
+
+The lecture format is exactly the same as ML (CS7641):  two professors (Charles Isbell & Michael Littman) having conversations. Usually Littman is the "teacher" who explains and Isbell plays the "student" who asks questions. 
+<br><br>
+
+I know it comes down to personal preference, but I really enjoyed the interactive style of lecture. It was engaging and fun. But I understand many students hate it. Indeed, the lecture is not concise. They intentionally take a detour. For example, for what could be a 5 minute short video of a powerpoint slide with 4 bullet points with some definitions and formula, this course instead presents a 25 minute video where they start with a toy problem and come up with naive solutions and show why they fail, and discuss their limitations, and then eventually derive an algorithm that works. It gives you a whole intellectual journey, with some jokes along the way. 
+<br><br>
+
+Considering the amount of math they go through in each lesson, this style of lecture really helped me build intuitive understanding.
+<br><br>
+
+<h2>Assignments</h2>
+
+<ul>
+<li>
+<b>6 homework assignments</b> (5% each):  It's concise & fun python programming exercise to get hands-on with specific RL topics. Every homework has autograder for students to verify their implementation. Although each homework is small in scope, it's not trivial. Many students often get stuck on some parts of implementation and spend hours/days before finally coming to an 'aha' moment. This is the only class where I regularly went to the office hour to ask questions because I often got stuck.
+</li>
+
+<li>
+<b>3 projects</b> (15% each):  Projects are hard, and requires you to thoroughly read papers, understand and implement algorithms, replicate experiments and analyze. 
+</li>
+
+<li>
+<b>Final exam</b> (25%):  Closed book, multiple choice format. It's hard but not unreasonable. I took detailed notes of the lecture throughout the semester, so I was able to use them for a quick review and do decently on the exam.
+</li>
+</ul>
+<br>
+
+<h2>Grading</h2>
+
+HW & exam are auto graded. The only human (TA) grading is for the project reports. TA grading standard is not so lenient, but reasonable enough. I got 95 ~ 100% for homework and projects, then got 75% for the exam, barely bringing the total score to ~90%. There was a grading curve so anything above 83% became an A.
+<br><br>
+
+<h2>Thoughts</h2>
+
+The instructor (Miguel Morales) was fantastic. I once joined his office hour to ask a homework-related question. He explained really well. He is truly knowledgeable and passionate about RL. I liked his positive energy. I learnt so much by listening to him.
+<br><br>
+
+RL is a hard subject. But unlike the ML course (CS7641) with its notoriously open-ended assignments that tried to cover so many ML topics, this course has a much narrower & specialized scope and each assignment is very specific as to what they want you to do. 
+<br><br>
+
+I found the overall time commitment for RL was less than other courses like ML, DL, GA, GIOS. 
+<br><br>
+
+<h2>FAQ</h2>
+
+<ul>
+<li>
+Can I take this course without taking cs7641 ML first ?
+  <ul>
+  <li>
+  Yes, it's not ideal but it's doable. The course content is self contained.
+  </li>
+  </ul>
+</li>
+
+</ul>
+<br>
+
+<h2>Reference</h2>
+
+Syllabus : <a href="https://omscs.gatech.edu/cs-7642-reinforcement-learning" target="_blank">https://omscs.gatech.edu/cs-7642-reinforcement-learning</a>
+
+
+    </section>
+
+<br><hr><section class="footer">&copy; etlq - All Rights Reserved</section>
+
+</main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initial theme                                                                                                                                              
+    if (savedTheme) {
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      document.body.classList.toggle('dark', prefersDark);
+    }
+
+    updateButton();
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      const theme = document.body.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      localStorage.setItem('theme', theme);
+      updateButton();
+    });
+
+    function updateButton() {
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light'
+        : '🌙 Dark';
+    }
+  </script>
+
+</body>
+</html>

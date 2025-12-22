@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content=Georgia Tech OMSA ISYE 6644 Simulation course review, homework, midterm exam, final exam, project, grading name='description'/>
+  <title>Review of OMSA ISYE 6644 Simulation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+    <!--  <a href="#" class="back">←</a> -->
+
+      <span class="header-title"><a href="https://etlq.github.io/">My review of everything</a></span>
+
+      <nav class="menu">
+    <!-- 
+        <a href="#admission">Admission</a> 
+        <a href="#courses">Courses</a> 
+        <a href="#thoughts">Thoughts</a> 
+    -->
+      <button id="themeToggle" class="theme-toggle">
+        🌙 Dark
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="courses">
+
+<h1>My Review of SIM (ISYE 6644) Simulation Modeling for Engineering Science</h1>
+
+<pre>
+           Grade: A 
+      Difficulty: 6/10
+          Rating: 9/10 
+ Time commitment: 7 hours/week 
+------------------------------
+</pre>
+<br>
+
+<h2>Overall</h2>
+<p>
+This is a pencil and paper stat/math course. The course starts with stats/probability/calculus review, then dives deep into random variables and statistical distributions/properties, including many theorems and some proofs. The course also touches a bit on stochastic/markov processes. Only about 30% of the content actually has anything directly to do with simulation concepts, like steady-state finite-horizon analysis. Incidentally this is also the first course you take if you enroll in the MS OR program at Georgia Tech. 
+</p>
+
+<h2>Assignments</h2>
+
+<ul>
+<li>
+<b>Weekly homework</b> (~0.7% each):
+  <ul>
+  <li>
+  Take-home, multiple choice format. Each homework typically consists of 10 ~ 15 questions. It usually took me a few hours at most. Not always trivial but overall manageable. Each homework is only worth ~0.7% of the course grade. So the homework is meant to be the exercise/preparation for the exams. Plus they often give bonus homework questions for extra credit. 
+  </li>
+  </ul>
+</li>
+
+<li>
+<b>3 exams:</b>
+  <ul>
+  <li>
+  2 midterms + 1 final. 25% for each midterm. 30% for the final. All proctored, timed and only 1~3 sheets of notes are allowed. The majority of the course grade is based on the 3 exams. So it's mentally stressful. But luckily, it's not super hard. Very manageable if you understood your homework questions.
+  </li>
+  </ul>
+
+<li>
+<b>Project</b> (10%):
+  <ul>
+  <li>
+  They have an extensive list of topics you can choose from. They say they expect a student to spend 10~15 hours of effort. I spent maybe 15 hours on it. It's just one weekend worth of effort. One amazing aspect to the project is you can do solo. I did solo.
+  </li>
+  </ul>
+</li>
+</ul>
+<br>
+
+<h2>Grading</h2>
+
+<p>
+All weekly homework and exams are auto-graded. The project grading was done by TA, and I found it reasonable.
+I scored 90~100% on homework, 80~95% on exams, and 100% on project. My overall score was 89%. The professor applies a curve. I heard from a class mate whose overall score was 83% and he got an A.
+</p>
+
+<h2>Thoughts</h2>
+
+I was hyped to take this course because of stellar reviews on OMS central. Everybody praised the professor Goldsman as a great presenter with a sense of humor. Indeed, I found him amazing. His lecture is fun to watch. I could tell he is genuinely passionate about the subject.
+<br><br>
+
+Regarding the level of math, I was worried before the semester because it had been years since I took a pencil and paper math/stat course. But it turned out fairly manageable difficulty and workload overall.
+<br><br>
+
+The first 3 weeks are just stats/probability/calculus refresher, so you will get a plenty of time to review all the math you need for the rest of the course.
+<br><br>
+
+Overall, I ended up spending 7 hours per week. It took me 1 ~ 3 hours to watch the lecture videos, and 1 ~ 3 hours to do the homework. I studied 5 ~ 10 hours before each exam. 
+<br><br>
+
+The only truly objectively negative aspect of the course is Arena simulation software. A decent portion (5~10%) of homework and exam questions are about Arena software which requires pure rote memorization, like syntax of Arena API, which was painful. 
+<br><br>
+
+<h2>FAQ</h2>
+
+<ul>
+<li>
+Do I need a Windows computer for Arena ? 
+  <ul>
+  <li>
+  Not at all. I only have a Mac laptop and did perfectly fine. They give you access to GT virtual/cloud Windows desktop where Arena is already installed. 
+  </li>
+  </ul>
+</li>
+
+<li>
+Can I use other simulation software like SimPy ?
+  <ul>
+  <li>
+  No, you must use Arena. It's so ingrained in the lecture video, so I don't think this will change in any foreseeable future.
+  </li>
+  </ul>
+</li>
+
+<li>
+Do I need to buy a calculator ? If so, any recommendations ?
+  <ul>
+  <li>
+  I know people talk about this a lot. Personally I never had to use any calculator at all. All of the calculus/probability questions are solvable by hand. I've heard people used TI 83/84/89/NSpire. 
+  </li>
+  </ul>
+</li>
+</ul>
+<br>
+
+<h2>Reference</h2>
+
+Syllabus : <a href="https://omscs.gatech.edu/isye-6644-simulation-and-modeling-engineering-and-science" target="_blank">https://omscs.gatech.edu/isye-6644-simulation-and-modeling-engineering-and-science</a>
+
+    </section>
+
+<br><hr><section class="footer">&copy; etlq - All Rights Reserved</section>
+
+</main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initial theme                                                                                                                                              
+    if (savedTheme) {
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      document.body.classList.toggle('dark', prefersDark);
+    }
+
+    updateButton();
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      const theme = document.body.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      localStorage.setItem('theme', theme);
+      updateButton();
+    });
+
+    function updateButton() {
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light'
+        : '🌙 Dark';
+    }
+  </script>
+
+</body>
+</html>

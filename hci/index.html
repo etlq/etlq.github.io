@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content=Georgia Tech OMSCS CS 6750 Human Computer Interaction course review, homework, exam, project, grading name='description'/>
+  <title>Review of OMSCS CS 6750 Human Computer Interaction</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+    <!--  <a href="#" class="back">←</a> -->
+
+      <span class="header-title"><a href="https://etlq.github.io/">My review of everything</a></span>
+
+      <nav class="menu">
+    <!-- 
+        <a href="#admission">Admission</a> 
+        <a href="#courses">Courses</a> 
+        <a href="#thoughts">Thoughts</a> 
+    -->
+      <button id="themeToggle" class="theme-toggle">
+        🌙 Dark
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="courses">
+
+<h1>My Review of HCI (CS6750) Human Computer Interaction</h1>
+
+<pre>
+           Grade: A
+      Difficulty: 1/10
+          Rating: 3/10
+ Time commitment: 8 hours/week
+------------------------------
+</pre>
+<br>
+
+<h2>Overall</h2>
+
+This is a perfect summer class. I took it because I needed a chill course after getting burned out by CS7641 ML.
+<br><br>
+
+The course teaches you the whole process of user need-finding, prototyping, feedback evaluation and what design principles to consider at each step. It does a good job of formally conceptualizing what attributes improve user experience. No hard math/stats, no coding (unless you want to make it part of the project). Just writing reports after reports after reports, while you do participation credit harvesting on the side.
+<br><br>
+
+The course is easy, but <u>easy does not mean quick</u>. It still takes considerable time.
+<br><br>
+
+<h2>Assignment</h2>
+
+<ul>
+<li>
+<b>Bi-weekly reports:</b>  You write essays using the vocabulary/concepts from the lecture. Here we basically go through the entire design cycle of user need-finding, brainstorming, prototyping, feedback evaluation. Some assignments involve conducting actual surveys/interviews in the real world, so it can be time consuming.
+</li>
+
+<li>
+<b>Participation credit:</b>  10% of the course grade. 3 sources of points: 1. peer review of class mates weekly reports. 2. piazza contribution. 3. helping other class mates surveys/interviews. Every students is assigned several tokens which he/she can give out to class mates who help with surveys/interviews. So you collect tokens from your class mates, where each token is worth 0.1% of the course grade.
+</li>
+
+<li>
+<b>Exam:</b>  Proctored midterm and final. 12.5% each. Relatively easy. Open book, open internet. no live communication with other human being. The median score was like 89. 
+</li>
+
+<li>
+<b>Project:</b>  Bi-weekly reports made you go through the design cycle step by step. With the project, you re-do the whole design cycle, this time on a single topic. 
+</li>
+</ul>
+<br>
+
+<h2>Grading</h2>
+
+As long as you do the work, it's a guaranteed course grade A. I've seen people settle with a B because they couldn't bother completing some of the reports or participation credit activity.
+<br><br>
+
+<h2>Thoughts</h2>
+
+I personally didn't enjoy the course overall. That is not to say this was a bad course. I have nothing against it, and I agree HCI is important and relevant as computer is now ubiquitous in our society. But I guess I'm not into HCI as a subject.
+<br><br>
+
+To me it felt like the lecture was describing common sense. It's a bit like watching an academic lecture video on cooking: how we need to consider various sensory inputs: visual, texture, olfactory as well as impact on health. I know cooking is clearly important and relevant as we all eat food, but it just felt all common sense.
+<br><br>
+
+I saw a student saying at the graduation that this was the best course in the entire omscs program, and how he uses the principles he learnt from this course at his work all the time. So it depends on the perspectives. 
+<br><br>
+
+There is a lot of writing, which is the teaching style of prof Joyner. I know many students hate it. I think it is a valid criticism that he turns every course into a writing course. But that's somewhat expected of a professor whose specialization is HCI.
+<br><br>
+
+It's worth noting that prof Joyner is so well engaged, so prepared, so positively passionate about teaching. In terms of professionalism as course instructor, he is among the best (maybe the very best). 
+<br><br>
+
+<h2>FAQ</h2>
+
+<ul>
+<li>
+If you didn't enjoy HCI, why do you think this class is so highly rated on OMSCentral ?  Do you recommend taking this class to others ?
+  <ul>
+  <li>
+  It's a well organized class and yes I recommend it if (and that's a big if) you are interested in HCI as a subject. My mistake was taking this class knowing I was not interested in the subject simply because this class was rated "easy".  
+  </li>
+  <li>
+  It's similar to taking on a job you are not interested in because it pays good salary. Life will not feel fulfilling :-)
+  </li>
+  </ul>
+</li>
+</ul>
+<br>
+
+<h2>Reference</h2>
+
+Syllabus : <a href="https://omscs.gatech.edu/cs-6750-human-computer-interaction" target="_blank">https://omscs.gatech.edu/cs-6750-human-computer-interaction</a>
+
+    </section>
+
+<br><hr><section class="footer">&copy; etlq - All Rights Reserved</section>
+
+</main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initial theme                                                                                                                                              
+    if (savedTheme) {
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      document.body.classList.toggle('dark', prefersDark);
+    }
+
+    updateButton();
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      const theme = document.body.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      localStorage.setItem('theme', theme);
+      updateButton();
+    });
+
+    function updateButton() {
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light'
+        : '🌙 Dark';
+    }
+  </script>
+
+</body>
+</html>

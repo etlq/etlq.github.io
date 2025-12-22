@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content=Georgia Tech OMSCS CS 7641 Machine Learning course review, homework, exam, project, assignment, reports, grading name='description'/>
+  <title>Review of OMSCS CS 7641 Machine Learning</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+    <!--  <a href="#" class="back">←</a> -->
+
+      <span class="header-title"><a href="https://etlq.github.io/">My review of everything</a></span>
+
+      <nav class="menu">
+    <!-- 
+        <a href="#admission">Admission</a> 
+        <a href="#courses">Courses</a> 
+        <a href="#thoughts">Thoughts</a> 
+    -->
+      <button id="themeToggle" class="theme-toggle">
+        🌙 Dark
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="courses">
+
+<h1>My Review of ML (CS7641) Machine Learning</h2>
+
+<pre>
+           Grade: A 
+      Difficulty: 8/10 
+          Rating: 10/10
+ Time commitment: 15 hours/week
+------------------------------- 
+</pre>
+<br>
+
+<h2>Overall</h2>
+
+This course is hard for two reasons. 
+
+<ul>
+<li>
+<b>(1)</b> The sheer volume of topics covered in this course is massive. It feels like you are drinking from a fire hose. The professor says the goal is to get as much breadth as possible with enough depth so students can go out there and dig in any particular field on their own. They cover all of standard ML topics (supervised, unsupervised & reinforcement learning). Then they even cover some theoretical ML (e.g. PAC learning, Haussler theorem, VC dimension)
+</li>
+
+<li>
+<b>(2)</b> Assignments are extremely open ended, and they intentionally don't reveal rubrics. 
+</li>
+</ul>
+<br>
+
+<h2>Lecture quality</h2>
+
+The lecture format is unique. Two professors (Charles Isbell & Michael Littman) "chatting" in front of a drawing board. They take turns to give a lecture on each new topic: one professor plays the "teacher" and the other professor plays the "student" who constantly interrupts to asks questions. They often derive algorithm/formula by hand live in the lecture, which is impressive.
+<br><br>
+
+I thought this interactive style of lecture was fantastic because you get to see their thought process: they start with the problem, then discuss ideas for solutions, and eventually arrive at an ML algorithm. This way, you really get to see the motivation/intuition behind ML models, instead of getting a bunch of formula & definitions thrown at you.
+<br><br>
+
+The downside to this style of lecture is that the video length tends to be very prolonged (the total video length is approx. 28 hours). It often feels like you see they just joke around for 2 minutes, and come back to the lecture. Some students hate this format so much that they refuse to watch it and study from external materials, like Andrew Ng's Coursera series. It's really the matter of individual preferences. Luckily, I personally found this style of lecture fun & engaging.  
+<br><br>
+
+<h2>Assignments</h2>
+
+<ul>
+<li>
+<b>Projects</b>: There are 4 big projects (they call them 'assignments'). The goal is not to derive theorems or implement algorithms from scratch, but it's all about analysis. They tell you to apply various ML algos to certain dataset, and present "interesting" analysis. It's extremely open ended. Typically each assignment can take 20 ~ 40 hours. 
+
+  <ul>
+  <li>  A1 : supervised learning  </li>
+  <li>  A2 : unsupervised learning & dimensionality reduction  </li>
+  <li>  A3 : randomized optimization  </li>
+  <li>  A4 : reinforcement learning  </li>
+  </ul>
+
+<li>
+<b>Exams</b>: I thought exams (one midterm & one final) were hard. Again the focus is not about reciting theorems or formulas, but about "synthesis" of various ML principles and technique. e.g. given a dataset of certain characteristics, can you intelligibly discuss why model A might out/under perform model B ? 
+</li>
+</ul>
+<br>
+
+<h2>Grading</h2>
+
+This course has a controversial grading scheme. It's part of the projects for you to think about what "interesting analysis" means. In other words, the grading rubrics are hidden. So when you submit a report, you don't know whether you are gonna get 30% or 90%. Yes it's wildly unpredictable.
+<br><br>
+
+TAs typically give you any score between 30 ~ 100%. I sometimes got 50%, and other times got 100%. It felt very random. Whenever TA docks points, the feedback is usually "It's great that you discussed X, but you didn't talk about Y & Z."  (duh)
+<br><br> 
+
+Obviously it's frustrating. But the idea is they want you to think about what makes an interesting ML analysis. It defeats the purpose if they told you exactly what to explore, as in which model tends to overfit, which performance metrics to use & why, how outliers influenced the models, why you need to standardize features only for some models, what graphs to plots, why training time varies so much by models, so on.
+<br><br>
+
+Some students have serious panic & mental breakdown for receiving 50% score after spending 40 hours. They think they are failing the course. They grow intense hatred, and write long angry posts on Piazza & Reddit. But it's clear from official university records (<a href="https://lite.gatech.edu/" target="_blank">https://lite.gatech.edu/</a>) that every semester more than 50% of this class gets an A. So I never ever had to worry about my grade, because I knew my reports were good enough to score at least the class median, which guarantees an A. So I just focused on learning. 
+<br><br>
+
+<h2>Thoughts</h2>
+
+I think students like or dislike this course depending on whether they appreciate the philosophy of the course, which is to synthesize knowledge. I found the assignments rewarding. I learnt so much. This course definitely made me a better data scientist / ML researcher. 
+<br><br>
+
+They probably should cut out the RL (reinforcement learning) module, because there is a separate dedicated RL course (CS7642) which is designed as a sequel. 
+<br><br>
+
+<h2>Reference</h2>
+
+Syllabus : <a href="https://omscs.gatech.edu/cs-7641-machine-learning" target="_blank">https://omscs.gatech.edu/cs-7641-machine-learning</a>
+
+    </section>
+
+<br><hr><section class="footer">&copy; etlq - All Rights Reserved</section>
+
+</main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initial theme                                                                                                                                              
+    if (savedTheme) {
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      document.body.classList.toggle('dark', prefersDark);
+    }
+
+    updateButton();
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      const theme = document.body.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      localStorage.setItem('theme', theme);
+      updateButton();
+    });
+
+    function updateButton() {
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light'
+        : '🌙 Dark';
+    }
+  </script>
+
+</body>
+</html>

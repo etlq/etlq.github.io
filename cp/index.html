@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content=Georgia Tech OMSCS CS 6475 Computational Photography course review, homework, exam, grading name='description'/>
+  <title>Review of OMSCS CS 6475 Computational Photography</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+    <!--  <a href="#" class="back">←</a> -->
+
+      <span class="header-title"><a href="https://etlq.github.io/">My review of everything</a></span>
+
+      <nav class="menu">
+    <!-- 
+        <a href="#admission">Admission</a> 
+        <a href="#courses">Courses</a> 
+        <a href="#thoughts">Thoughts</a> 
+    -->
+      <button id="themeToggle" class="theme-toggle">
+        🌙 Dark
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="courses">
+
+<h1>My Review of (CS6475) Computational Photography</h1>
+
+<pre>
+           Grade: B      
+      Difficulty: 4/10 
+          Rating: 8/10
+ Time commitment: 10 hours/week 
+-------------------------------
+</pre>
+<br>
+
+<h2>Overall</h2>
+
+I took this course because I was interested in photography. It delivers quality lectures on computational techniques involved with modern digital photography. The course starts off with lessons on the inner mechanics of how a camera captures an image, e.g. lens, optical sensor, aperture, exposure, shutter, ISO sensitivity, focal length adjustment. Then moves onto computational algorithms for feature detection and image transformation.
+<br>
+e.g. Harris Laplacian algorithm that can detect features (such as corners and edges) in scale invariant way. 
+<br>
+e.g. Fourier transformation for signal reconstruction (feature extraction) out of noisy image. 
+<br><br>
+
+They touch on some linear algebra but they don't test you directly on the math in the exam. The focus is mostly on coding and implementation. 
+<br><br>
+
+After taking this course, you will be able to explain technical details of HDR, video stabilization, and all the fancy filters available in photo apps, which will clearly make you popular at parties. You will be dating an instagram model in no time.
+<br><br>
+
+<h2>Assignments</h2>
+
+<ul>
+<li>
+<b>Homework</b>:  Relatively easy. Each homework took no more than several hours. Mostly just implementing Python code to do some image processing you learnt in the lecture. It can get tricky and time consuming sometimes because you need to find good input image data. e.g. for edge detection homework, you need photos that at least have good edges so your code can produce meaningful results. 
+</li>
+
+<li>
+<b>Quiz</b>:  They tried to make questions unnecessarily complicated but it's only a few % of overall course grade. 
+</li>
+
+<li>
+<b>Project</b>:  In my semester they gave a list of topics to choose from & to implement. I didn't like the open-ended nature of the project. I just did the bare minimum.
+</li>
+
+<li>
+<b>Exam</b>:  One final exam. It was reasonable difficulty. Most questions were directly from the lecture, but some were from the assigned papers.
+</li>
+
+<li>
+<b>Portfolio</b>:  It's just copy & paste from the homework/project, and making it look pretty.
+</li>
+
+</ul>
+<br>
+
+<h2>Grading</h2>
+
+For the homework, as long as you implemented correctly, you get 90~100%. Exam is also manageable. Portfolio is automatic 100%. The project grading was random due to TA's subjective judgement. I got unlucky with TA: I was scoring 90+% on everything, and then got killed on the project grade, dragging me down to overall course grade B.
+<br><br>
+
+<h2>Thoughts</h2>
+
+Overall I found the course interesting & rewarding. The lecture contents and the homework assignments are really well linked that translated into good learning.
+<br><br>
+
+In terms of administration, the course was mostly run by TAs and it was somewhat disorganized. Nothing catastrophic, but typical sloppy jobs such as ambiguous project instructions and clarification given in several different places, some are in random Piazza threads, while others are in latex report template files, so on. Also TA messed up a submission page config on some assignments so students couldn't resubmit even before deadline. These little things added a bit of stress. 
+<br><br>
+
+<h2>Reference</h2>
+
+Syllabus : <a href="https://omscs.gatech.edu/cs-6475-computational-photography" target="_blank">https://omscs.gatech.edu/cs-6475-computational-photography</a>
+
+
+    </section>
+
+<br><hr><section class="footer">&copy; etlq - All Rights Reserved</section>
+
+</main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initial theme                                                                                                                                              
+    if (savedTheme) {
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      document.body.classList.toggle('dark', prefersDark);
+    }
+
+    updateButton();
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      const theme = document.body.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      localStorage.setItem('theme', theme);
+      updateButton();
+    });
+
+    function updateButton() {
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light'
+        : '🌙 Dark';
+    }
+  </script>
+
+</body>
+</html>

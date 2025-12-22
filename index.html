@@ -1,38 +1,97 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Static Website</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content=Georgia Tech OMSCS OMSA course review, admission, data science, career transition, quant finance, hedge fund, etlq name='description'/>
+  <title>My review of everything</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Website</h1>
-        <p>A simple static site example using HTML and CSS.</p>
-    </header>
 
-    <main>
-        <section>
-            <h2>About This Page</h2>
-            <p>
-                This page uses basic HTML for structure and CSS for styling. It features a responsive design that looks good on both desktop and mobile devices. You can easily modify the colors, fonts, and content to fit your needs.
-            </p>
-        </section>
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+    <!--  <a href="#" class="back">←</a> -->
 
-        <section>
-            <h2>Features</h2>
-            <ul>
-                <li>Clean layout</li>
-                <li>Responsive design</li>
-                <li>Easy to customize</li>
-                <li>No JavaScript required</li>
-            </ul>
-        </section>
-    </main>
+      <span class="header-title"><a href="https://etlq.github.io/">My review of everything</a></span>
 
-    <footer>
-        <p>&copy; 2025 Simple Static Website. All rights reserved.</p>
-    </footer>
+      <nav class="menu">
+    <!-- 
+        <a href="#admission">Admission</a> 
+        <a href="#courses">Courses</a> 
+        <a href="#thoughts">Thoughts</a> 
+    -->
+      <button id="themeToggle" class="theme-toggle">
+        🌙 Dark
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="courses">
+
+ <h2>Georgia Institute of Technology</h2>
+ <h3>Course Reviews</h3>
+ <ul>
+   <li>CS 6250: <a href="https://etlq.github.io/omscs/cn/">Computer Networks (CN)</a></li>
+   <li>CS 7637: <a href="https://etlq.github.io/omscs/kbai/">Knowledge based Artificial Intelligence (KBAI)</a></li>
+   <li>CS 6515: <a href="https://etlq.github.io/omscs/ga/">Graduate Algorithms (GA)</a></li>
+   <li>CS 6200: <a href="https://etlq.github.io/omscs/gios/">Graduate Operating Systems (GIOS)</a></li>
+   <li>CS 6475: <a href="https://etlq.github.io/omscs/cp/">Computational Photography (CP)</a></li>
+   <li>CS 7646: <a href="https://etlq.github.io/omscs/ml4t/">Machine Learning for Trading (ML4T)</a></li>
+   <li>CSE 6242: <a href="https://etlq.github.io/omscs/dva/">Data and Visual Analytics (DVA)</a></li>
+   <li>CS 7641: <a href="https://etlq.github.io/omscs/ml/">Machine Learning (ML)</a></li>
+   <li>CS 6750: <a href="https://etlq.github.io/omscs/hci/">Human Computer Interaction (HCI)</a></li>
+   <li>CS 7642: <a href="https://etlq.github.io/omscs/rl/">Reinforcement Learning (RL)</a></li>
+   <li>ISYE 6501: <a href="https://etlq.github.io/omsa/iam/">Intro to Analytics Modeling (IAM)</a></li>
+   <li>MGT 6203: <a href="https://etlq.github.io/omsa/dab/">Data Analytics in Business (DAB)</a></li>
+   <li>CS 7643: <a href="https://etlq.github.io/omscs/dl/">Deep Learning (DL)</a></li>
+   <li>MGT 8813: <a href="https://etlq.github.io/omsa/fm/">Financial Modeling (FM)</a></li>
+   <li>ISYE 6644: <a href="https://etlq.github.io/omsa/sim/">Simulation Modeling for Engineering Science (SIM)</a></li>
+   <li>ISYE 6414: <a href="https://etlq.github.io/omsa/reg/">Regression Analysis (REG)</a></li>
+   <li>ISYE 6669: <a href="https://etlq.github.io/omsa/dopt/">Deterministic Optimization (DO)</a></li>
+ </ul>
+
+    </section>
+
+<br><hr><section class="footer">&copy; etlq - All Rights Reserved</section>
+
+</main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initial theme                                                                                                                                              
+    if (savedTheme) {
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      document.body.classList.toggle('dark', prefersDark);
+    }
+
+    updateButton();
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      const theme = document.body.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      localStorage.setItem('theme', theme);
+      updateButton();
+    });
+
+    function updateButton() {
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light'
+        : '🌙 Dark';
+    }
+  </script>
+
 </body>
 </html>

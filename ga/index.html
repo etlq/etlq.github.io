@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content=Georgia Tech OMSCS CS 6515 Graduate Algorithms course review, homework, exam, quiz, grading, OSI, false accusation name='description'/>
+  <title>Review of OMSCS CS 6515 Graduate Algorithms</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+    <!--  <a href="#" class="back">←</a> -->
+
+      <span class="header-title"><a href="https://etlq.github.io/">My review of everything</a></span>
+
+      <nav class="menu">
+    <!-- 
+        <a href="#admission">Admission</a> 
+        <a href="#courses">Courses</a> 
+        <a href="#thoughts">Thoughts</a> 
+    -->
+      <button id="themeToggle" class="theme-toggle">
+        🌙 Dark
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="courses">
+
+<h1>My Review of GA (CS6515) Graduate Algorithms</h1>
+
+<pre>
+           Grade: B 
+      Difficulty: 10/10
+          Rating: 8/10 
+ Time commitment: 20 hours/week 
+-------------------------------
+</pre>
+<br>
+
+<h2>Overall</h2>
+It's arguably the hardest course in the program. Not impossible but definitely needs serious time commitment. 
+<br><br>
+
+It's really a theory course. I was expecting an advanced algorithm analysis class, like asymptotic versus amortized computation complexity. But no, the course focuses on the theory side of computer science that has nothing to do with coding, but rather set theory, probability, formal proof by induction on bounds, P vs NP problems, linear programming, etc.
+<br><br>
+
+For example, you will be working on a lot of theorems and proving bounds on linear programming (LP) problems. Obviously even the most casual audience knows every LP problem can be transformed between dual and primal forms. If either the primal problem or the dual has a finite optimal solution, so does the other, and the optimum objective values are equal. If either problem has an unbounded objective value, then the other is infeasible. If we have an algorithm that transforms a feasible solution to a different form that monotonically improves the objective value, which we can apply repeatedly to converge to the optimal solution, can we show if this algorithm runs in polynomial time ?
+<br><br>
+
+--> You like the sound of it ?  Every lecture goes like that. 
+<br><br>
+
+<h2>Lecture quality</h2>
+
+Despite mixed reviews, I found the lecture video quality great. I thought they covered enough ground to get you started on the homework assignments, and get prepared for the exams.
+<br><br>
+
+<h2>Assignments</h2>
+
+<ul>
+<li>
+<b>Homework</b>:  
+  <ul>
+  <li>
+  I found them hard, easily takes 15 hours each. Many of them are pure math problems you solve with pencil and paper. Some are python coding problems but the focus is still on the theoretical/algorithmic aspect. Homework prepares you for the exams. 
+  </li>
+  </ul>
+</li>
+
+<li>
+<b>Exams</b>:  
+  <ul>
+  <li>
+  Most of the course grade comes from exams. Super hard. It's mentally stressful to have to write proofs under proctored & timed situation, knowing its outcome determines your course grade.
+  </li>
+  </ul>
+</li>
+</ul>
+<br>
+
+<h2>Grading</h2>
+
+I thought the grading was strict but overall reasonable. Getting an A is not easy but doable. I missed it by 1%. My pathetic excuse is I couldn't finish one homework on the week when I had to move to a new country for a new job. But hey, winners don't make an excuse when the other side plays the game. 
+<br><br>
+
+<h2>Thoughts</h2>
+
+I liked the course. This is the weed-out course of the whole osmcs program. I had a colleague who finished omscs and works as quant developer at a hedge fund (there are many omscs grads in hedge fund industry by the way). He once half-jokingly said that whenever he interviews an omscs graduate, the first question he asks is "have you taken GA ?"  And if the candidate says no, then he considers this candidate is a slacker (lol). 
+<br><br>
+
+Personally, while it was intellectually stimulating, none of the course content has been directly applicable nor relevant to my day job (equity quant research). It's not a criticism, and in fact, that's the point of a theory course. But one idea for the future direction of the course is to introduce a project that focuses on, for example, some non-trivial realistic optimization problem. This should alleviate the stress away from proof writing exams (under time pressure) being most of the course grade.
+<br><br>
+
+Also, previously there has been a lot of drama about many students getting falsely accused of plagiarism. You can read about it on this reddit post. The adjudication process is truly litigious and time consuming. It can go on for months even after the semester ended. I can only imagine the horrific mental stress these students went through.
+<br><br>
+
+100% Win Rate: How We Fought and Won Against False Plagiarism Allegations in CS6515
+<a href="https://www.reddit.com/r/OMSCS/comments/1h1g3xj" target="_blank">https://www.reddit.com/r/OMSCS/comments/1h1g3xj</a>
+<br><br>
+
+<h2>Reference</h2>
+
+Syllabus : <a href="https://omscs.gatech.edu/cs-6515-intro-graduate-algorithms" target="_blank">https://omscs.gatech.edu/cs-6515-intro-graduate-algorithms</a>
+
+
+    </section>
+
+<br><hr><section class="footer">&copy; etlq - All Rights Reserved</section>
+
+</main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initial theme                                                                                                                                              
+    if (savedTheme) {
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      document.body.classList.toggle('dark', prefersDark);
+    }
+
+    updateButton();
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      const theme = document.body.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      localStorage.setItem('theme', theme);
+      updateButton();
+    });
+
+    function updateButton() {
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light'
+        : '🌙 Dark';
+    }
+  </script>
+
+</body>
+</html>

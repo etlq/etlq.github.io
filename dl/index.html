@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content=Georgia Tech OMSCS CS 7643 Deep Learning course review, homework, quiz, project, grading name='description'/>
+  <title>Review of OMSCS CS 7643 Deep Learning</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+    <!--  <a href="#" class="back">←</a> -->
+
+      <span class="header-title"><a href="https://etlq.github.io/">My review of everything</a></span>
+
+      <nav class="menu">
+    <!-- 
+        <a href="#admission">Admission</a> 
+        <a href="#courses">Courses</a> 
+        <a href="#thoughts">Thoughts</a> 
+    -->
+      <button id="themeToggle" class="theme-toggle">
+        🌙 Dark
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="courses">
+
+<h1>My Review of DL (CS 7643) Deep Learning</h1>
+
+<pre>
+           Grade: A
+      Difficulty: 8/10
+          Rating: 8/10 
+ Time commitment: 18 hours/week 
+-------------------------------
+</pre>
+<br>
+
+<h2>Overall</h2>
+<p>
+This is a hard but rewarding course with a huge workload that demands significant time commitment. The content overlaps with Andrew Ng's Coursera DL specialization series. Also a lot of the assignments are replicated from Stanford DL course cs231n <a href="https://cs231n.stanford.edu/" target="_blank">https://cs231n.stanford.edu/</a>
+</p>
+
+<h2>Lecture quality</h2>
+
+They have two kinds of lecture videos.
+
+<ul>
+<li>
+(1) Lectures by the GT course instructor Zsolt Kira:
+</li>
+  <ul>
+  <li>
+ These are generally ok. But he tends to explain things with technical terms that are not beginner friendly, and assume the audience has solid foundation on ML principles
+  </li> 
+  <li> e.g. various regularization techniques, hyper parameter tuning, bias variance trade-off, typical statistical properties to pay attention to, how to evaluate model performance, so on.
+  </li>
+  <li>
+  Because I took ML & RL before this course, I was able to follow him, but often I went "wow, no way I would've understood what he said if this was my first ML course !"
+  </li>
+  </ul>
+
+<li>
+(2) Lectures by Meta:
+</li>
+  <ul>
+  <li>
+  These are presented by several Meta researchers, and generally of poor quality. I understand the idea was to bring in the industry experts on each topic. But having so many presenters, it often felt disjoint and incoherent overall. 
+  </li>
+  <li>
+  For example, there was one presenter, I could tell from her academic credentials that she was genius but had a terrible accent that nobody could understand. I'm someone who is really good at being able to understand English spoken with strong accents, but even I had to give up..  And it became a meme in the course Discord forum because the auto-generated caption also got her wrong and generated all kinds of hilariously inappropriate and incorrect captions.
+  </li>
+  </ul>
+</ul>
+<br>
+
+As such, some students choose not to watch the lecture, but instead watch university of Michigan DL lectures and Andrew Ng's Coursera lectures.
+<br><br>
+
+I could give one concrete example as constructive criticism. 
+<ul>
+<li>
+The lecture video on RL was very rushed and hard to understand. RL is a big hard topic of its own, so their attempt to squeeze a lot into one lesson was not successful. 
+</li>
+<li>
+For example, the lecture video covers policy gradient method in a few minutes, but every sentence is dense and you cannot casually just sit and listen to the lecture video. Instructor may say something like "policy gradient suffers from high variance problem, and then..." but never explains why it suffers from high variance problem. 
+</li>
+<li>
+While you stop to think what that sentence means, the instructor in the lecture video already spose the next five sentences which are equally dense. So I had to go and search external resource on that remark. It was common exercise for me to take more than 1 hour to digest and understand 10 minutes of lecture video. 
+</li>
+</ul>
+<br>
+
+<h2>Assignments</h2>
+
+<ul>
+<li>
+<b>5 Quizzes</b> (4% each):
+  <ul>
+  <li>
+  Closed notes, timed & proctored, multiple choice format (for some calculation questions, you enter your result in a textbox). These are essentially exams for which you need to seriously review the lecture content. They do include some calculus and linear algebra calculation questions related to gradient descent and convolutions, but mostly knowledge/concept questions. The quizzes are brutally hard.
+  </li>
+  </ul>
+</li>
+
+<li>
+<b>4 Assignments</b> (15% each):  
+  <ul>
+  <li>
+  Each assignment has 4 parts: (1) theory/math questions, (2) paper review, (3) coding/implementation, (4) experiment/report. It's massive & super time consuming!  I easily spent 30~50 hours on each assignment. You get to implement deep neural network from scratch in the first assignment. In the later assignments, you get to use PyTorch library to build CNN, RNN, LSTM, Attention (encoder/decoder) models. It's not as sexy as it sounds. I spend so many hours debugging matrix/tensor dimensions & multiplications. It was traumatizing. 
+  </li>
+  </ul>
+</li>
+
+<li>
+<b>Group Projects</b> (20%):
+  <ul>
+  <li>
+  You recruit team mates on the course forum in the first week. Then pick a topic based on the guidelines. My team picked a paper published by Oxford university quant finance researcher, and replicated the implementation of transformer models for stock trading. I was lucky to have amazing team mates. They are all hard working and nice people. But I imagine it can be a nightmare if you get unserious team mates. They don't allow a solo group. So you must pick a team of 3~5.
+  </li>
+  </ul>
+</li>
+</ul>
+<br>
+
+<h2>Grading</h2>
+
+<ul>
+<li>
+Quizzes are auto graded. So there is no ambiguity. The median quiz score was like 70%. I got ~90% on average across the five quizzes.
+</li>
+
+<li>
+The coding portion of the assignments are auto graded while the report portion is graded by TAs. I thought it was lenient. The median score was 90~95%.  I got 100%.
+</li>
+
+<li>
+Group project grading is also super lenient. The median score was ~95%. My team got 98%.
+</li>
+
+<li>
+No grading curve. But instructor hinted he might give a slight curve, just to save students on the border line. 
+</li>
+</ul>
+<br>
+
+<h2>Thoughts</h2>
+
+<ul>
+<li>
+Along with Graduate Algorithms (GA) class, DL was the most time consuming class I took in the entire OMSCS program. I cannot stress enough the sheer volume of work involved with each assignment. Also they are difficult, so it's not like you just spend enough time and eventually get done. Sometimes you may get stuck on a specific part of architecture, and may not be able to solve it for days. It's similar to working on a hard math problem. You keep working on it, but you don't know whether you come to an "aha" moment in 20 minutes or 20 hours. It's the uncertainty that's stressful.
+</li>
+
+<li>
+For example, I found the attention/transformer model implementation especially hard. I spent two full days just debugging my embeddings code to finally pass the autograder. I felt completely burnt out :-)
+</li>
+
+<li>
+The course forum was bombarded with students asking "help me debug my error" posts. It was like a flood of DDoS attack. So I stopped checking the forum. A lot of the questions on the course forum remained unanswered, which is understandable, as there were way too many "help me debug" posts.
+</li>
+
+<li>
+I cannot imagine taking this course during summer semester. they drop assignment #3. But then it's a precious learning opportunity lost. 
+</li>
+
+<li>
+One negative note is that there are too many forums for this course. There are a few discord servers on top of two slack channels on top of ed discussion board. They should really consolidate the discussion into one forum. This proliferation of forums seems unproductive for all. 
+</li>
+
+<li>
+Overall, it's a must take course if you wanna learn under-the-hood technical details of modern DL/LLM technologies like ChatGPT.
+</li>
+</ul>
+<br>
+
+<h2>FAQ</h2>
+
+<ul>
+<li>
+Do I need to buy a powerful GPU/RAM computer ?
+  <ul>
+  <li>
+  Not at all. I did all of my work using a 2013 Macbook laptop. You can do all of your work on Google Colab, so your local computer's spec does not matter at all. 
+  </li>
+  </ul>
+</li>
+
+<li>
+How does the workload compare between ML/RL/DL ?
+  <ul>
+  <li>
+  I thought ML & DL were more time consuming than RL
+  </li>
+  <li>
+But ML is so unique with its opened ended assignments, while RL & DL are similar in terms of the assignments being very specific as to what to implement.
+  </li>
+  </ul>
+</li>
+
+<li>
+How can I prepare for this DL class ?   Can I take this class without prior ML experience ?
+  <ul>
+  <li>
+  DL should not be your first ML class. The content assumes familiarity with ML principles.
+  </li>
+  <li>
+  I think taking either ML or ML4T helps as preparatory study.
+  </li>
+  </ul>
+</li>
+
+<li>
+If I have prior ML experience, can I take this class as my first class in the program ?
+  <ul>
+  <li>
+  Yes, I've seen people with enough ML background take this class without taking other ML related courses in OMSCS/OMSA, and do just fine. 
+  </li>
+  </ul>
+</li>
+
+<li>
+How much math do I need to study before taking this class ?
+  <ul>
+  <li>
+  It's not much. Just know basic calculus (how to take partial derivatives of multivariate functions, chain rules, quotient rules, etc) and linear algebra (how to calculate inner dot product). But it's really not bad at all. Don't let scary reviews discourage you. 
+  </li>
+  </ul>
+</li>
+
+</ul>
+<br>
+
+<h2>Reference</h2>
+
+<ul>
+<li>
+Syllabus : <a href="https://omscs.gatech.edu/cs-7643-deep-learning" target="_blank">https://omscs.gatech.edu/cs-7643-deep-learning</a>
+</li>
+</ul>
+
+    </section>
+
+<br><hr><section class="footer">&copy; etlq - All Rights Reserved</section>
+
+</main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initial theme                                                                                                                                              
+    if (savedTheme) {
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      document.body.classList.toggle('dark', prefersDark);
+    }
+
+    updateButton();
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      const theme = document.body.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      localStorage.setItem('theme', theme);
+      updateButton();
+    });
+
+    function updateButton() {
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light'
+        : '🌙 Dark';
+    }
+  </script>
+
+</body>
+</html>

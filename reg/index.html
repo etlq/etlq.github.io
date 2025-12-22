@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content=Georgia Tech OMSA ISYE 6414 Regression Analysis course review, homework, midterm exam, final project name='description'/>
+  <title>Review of OMSA ISYE 6414 Regression Analysis</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+    <!--  <a href="#" class="back">←</a> -->
+
+      <span class="header-title"><a href="https://etlq.github.io/">My review of everything</a></span>
+
+      <nav class="menu">
+    <!-- 
+        <a href="#admission">Admission</a> 
+        <a href="#courses">Courses</a> 
+        <a href="#thoughts">Thoughts</a> 
+    -->
+      <button id="themeToggle" class="theme-toggle">
+        🌙 Dark
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="courses">
+
+<h1>My Review of ISYE 6414 Regression Analysis</h1>
+
+<pre>
+           Grade: A
+      Difficulty: 3/10           
+          Rating: 4/10
+ Time commitment: 12 hours/week
+-------------------------------
+</pre>
+
+<h2>Overall</h2>
+
+This course covers 4 topics (they call modules) in depth:
+
+<ol>
+<li>
+Simple linear regression & ANOVA 
+</li>
+<li>
+Multiple linear regression 
+</li>
+<li>
+GLM (with focus on logistic & poisson regressions)
+</li>
+<li>
+Variable selection and regularization
+</li>
+</ol>
+<br>
+
+Each module goes deep into statistical properties, model assumptions, various kinds of associated tests for statistical inference. The lecture also includes plenty of case studies of real world application of regression analysis. The focus is hands-on application, rather than theory, although they do touch on a decent amount of mathematical details in the lecture.
+<br><br>
+
+I took this course during summer. They don't cut any content for the summer, so the pacing felt relentless.
+<br><br>
+
+<h2>Lecture quality</h2>
+
+<ul>
+<li>
+I thought it was fine overall. Many previous reviews complained about the instructor's English. Sure she has a thick eastern European accent, but it was perfectly understandable for me. 
+</li>
+
+<li>
+Lecture slides are comprehensive. The instructor sometimes adds important details only verbally, and those details will often come up on HW & exam questions. So you either have to pause the lecture video every minute to take notes, or digest the lecture by reading the transcripts. 
+</li>
+
+<li>
+Like so many of my class mates, I quickly switched to the transcripts. It took me around 15 hours to fully digest each module, taking detailed notes. 
+</li>
+</ul>
+<br>
+
+<h2>Assignments</h2>
+
+<ul>
+<li>
+<b>4 homework assignments</b> (7.5% each):
+  <ul>
+  <li>
+  Each homework has quiz & analysis parts. All untimed, take-home format. Quiz has ~40 questions, and usually took me a few hours. The analysis is a massive coding/experiment report you have to compile on Jupyter notebook. There are several big questions, each with a few sub questions. You have to write substantial code (R or Python) with some plots, and provide analysis. It often took me 20 hours. None of it is hard, but it's just an overwhelming amount of work. 
+  </li>
+  </ul>
+</li>
+
+<li>
+<b>Midterm exam</b> (30%):
+  <ul>
+  <li>
+  Similar to the homework format, the midterm exam splits into quiz and coding parts. All proctored and timed, with open-notes, but closed internet. The quiz was hard because of confusing wording & some questions asking rather obscure details from lecture transcripts. But overall not too bad. The coding part was brutal. Because it's closed internet, if you run into any error, whether it's a minor syntax error or whatever, if you cannot fix it on the fly, then you are cooked. 
+  </li>
+  </ul>
+</li>
+
+<li>
+<b>Group project</b> (40%):
+  <ul>
+  <li>
+  You recruit & finalize team mates on Piazza during the first week. Each team submits a proposal report & a final report. TA gave a list of topics to choose from. My team chose recidivism (crime) data. There was peer grading/feedback for team mates at the end of semester, which accounts for a few percentages of course grade. The details are public https://isye6414.com/ 
+  </li>
+  </ul>
+</li>
+</ul>
+<br>
+
+For homework & exams, they let you choose R or Python. I went with Python. It was ok. 
+<br><br>
+
+Regarding the "closed internet" exam, to be precise, they allow you to use stackoverflow.com by directly going to the URL. But no other online resource is allowed. Sadly, stackoverflow is useless because their search function is garbage. You need to use google to find relevant stackoverflow articles, which is not allowed.
+<br><br>
+
+<h2>Grading</h2>
+
+<ul>
+<li>
+HW quiz : auto graded
+</li>
+<li>
+HW code : peer graded anonymously by 3 class mates, and the median becomes your score.
+</li>
+<li>
+Exam quiz : auto graded
+</li>
+<li>
+Exam code : graded by TA
+</li>
+<li>
+Project : graded by TA
+</li>
+</ul>
+<br>
+
+I thought it was overall reasonable. I got 95+% for homework, 80+% for the exam, and 95% for the project. My overall course score was 92%. There was no curve.  So you really need to reach 90% to get an A.
+<br><br>
+
+The median score was like 85~90% for HW, 75~80% for the exam, and 90~95% for the project. I believe approx. 35~40% of the class got A. 
+<br><br>
+
+Regarding the grade, I know a smart student who graduated with nine As and one B. His only B came from this class because he ran into the code error during the closed-internet coding exam. I don't think a timed & closed-internet coding exam is a good way to evaluate the mastery of regression analysis.
+<br><br>
+
+<h2>Thoughts</h2>
+
+<ul>
+<li>
+I enjoyed the course. Unlike other courses (like DL) which attempt to cram sooo much content into one course, this course was well contained in its scope. And because it didn't have to cover too much breadth, it instead was able to focus deeply on the details of regression modeling. 
+</li>
+
+<li>
+Regarding Python vs R, in theory, it's the same homework : you implement using whichever programming language you prefer. But in practice, there was a lot of nuance and headache. You may get different results for the same question (with the exact same dataset) between Python and R for various tricky reasons. Even a simple task like fitting a model and printing the result, like model.fit().summary() can give you different sets of statistics (e.g. R may give you a particular type of residual error, while Python may give p-value at different default threshold or different degree of freedom adjustment, so on).  I appreciate the effort made by TA to offer the homework in multiple programming languages, but it caused so much confusion when it came to peer grading. In my opinion, they should just decide on only one language. 
+</li>
+
+<li>
+Incidentally, they somehow keep this course available only for OMSA program, even though they make many other ISYE courses available to OMSCS students (e.g. ISYE 6501 Intro to Analytics Modeling, ISYE 6644 Simulation, ISYE 6669 Deterministic Optimization).
+</li>
+</ul>
+<br>
+
+<h2>Course administration & Instructor/TA quality</h2>
+
+<ul>
+<li>
+This course has been consistently getting horrific reviews every semester for years, not because of the content but because of the way it was managed. I was wondering if the reviews were from a small subset of sensitive students overreacting. But indeed this course lived up to its infamous reputation. Overall, the TAs are sloppy. Their homework/project instructions are often confusingly vague, which requires constant clarification which gets buried in a mega thread in Piazza forum. So you have to comb through hundreds of posts on Piazza to find the answer. This adds unnecessary stress. That's been my experience.
+</li>
+
+<li>
+It's still a decent course with rewarding content. So don't let this dissuade you from taking this otherwise great learning opportunity.
+</li>
+</ul>
+<br>
+
+<h2>Group project drama</h2>
+
+<ul>
+<li>
+For your entertainment, I'll share our group project drama where we ended up kicking out a team member at the very end of the semester.
+</li>
+
+<li>
+Group project is such a pain because your grade depends on other people you have no control over. Sure you can try carefully recruit diligent peers on the class forum, but everyone can act nice on a post on Piazza. And whether they actually act responsible is unpredictable at the time of team formation.
+</li>
+
+<li>
+We had a team member who did not contribute. He kept skipping meetings with no explanation, despite repeated reminders. Very unserious and unprofessional. He comes back online just a few days before the deadline and tried to take on some tasks with no context of the weeks of work that has been done by the rest of the team. It was so much stress to give him any task and to babysit, which was more work than doing it by ourselves. Much to our dismay, unsurprisingly, he came back at the last minute "Hey guys, I tried to write code, but got some error I couldn't fix. So I let you guys do it, and I will instead just help with writing reports."
+</li>
+
+<li>
+Toward the end of semester, TA made an announcement about non-contributing members with specific criteria. Based on our team's peer feedback, TA decided this particular team mate was a non-contributing member, and removed him from the group project.
+</li>
+ 
+<li>
+We don't know what happened to his project grade. But the group project is 40% of course grade. So I imagine it's catastrophic. His course grade is at best D, or more likely F.
+</li>
+</ul>
+<br>
+
+<h2>FAQ</h2>
+
+<ul>
+<li>
+Should I use R or Python ?
+  <ul>
+  <li>
+  The syllabus officially says "you can do either, but R is STRONGLY recommended."
+  </li>
+  <li>
+  Despite the warning, because I wanted to learn this material in Python, I went with Python. It was overall fine. 
+  </li>
+  <li>
+  But it should be noted that all of the lecture case study demo videos are in R. The whole class was designed to be studied in R in the first place. Python was only recently added by TAs. So, naturally R works better. For example, some of the obscure test statistics (e.g. particular type of null deviance score to evaluate the logistic model) you have to calculate for homework can be done in an R library function in 2 seconds, while in Python you have to implement it by yourself, which can be time consuming.
+  </li>
+  <li>
+  Many students (wisely) choose R. So when they peer grade your Python submission, they may not understand it, and dock points randomly. (This happened to me. Their comment showed they didn't understand the Python solution file at all)
+  </li>
+  </ul>
+</li>
+
+<li>
+I wanna study regression analysis, but hesitant to take this class because of bad reviews.. Should I skip this class ?
+  <ul>
+  <li>
+  Up to you. I think the content is worth the trouble. Regression is such a foundational topic that every analytics (data science) student should take. Its details constantly come up during job interviews. I'm glad I took the course.
+  </li>
+  </ul>
+</li>
+</ul>
+<br>
+
+<h2>Resource</h2>
+
+One resource I found useful is the free tutor service officially offered by Georgia Tech on a platform called Knack <a href="https://grad.gatech.edu/knack-tutoring" target="_blank">https://grad.gatech.edu/knack-tutoring</a>  :  It's free to students. The tutors are hired/paid by GT and verified to be students who previously earned an A in the course. Because the tutors went through all the homework and exams (most of which are recycled), they can give valuable tips and guidance. My tutor definitely helped me score better on the midterm.
+
+    </section>
+
+<br><hr><section class="footer">&copy; etlq - All Rights Reserved</section>
+
+</main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initial theme                                                                                                                                              
+    if (savedTheme) {
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      document.body.classList.toggle('dark', prefersDark);
+    }
+
+    updateButton();
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      const theme = document.body.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      localStorage.setItem('theme', theme);
+      updateButton();
+    });
+
+    function updateButton() {
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light'
+        : '🌙 Dark';
+    }
+  </script>
+
+</body>
+</html>

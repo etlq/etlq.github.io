@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content=Georgia Tech OMSCS OMSA CSE 6242 DVA Data Visual Analytics course review, homework, exam, project, grading name='description'/>
+  <title>Review of OMSCS OMSA CSE 6242 Data and Visual Analytics</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+    <!--  <a href="#" class="back">←</a> -->
+
+      <span class="header-title"><a href="https://etlq.github.io/">My review of everything</a></span>
+
+      <nav class="menu">
+    <!-- 
+        <a href="#admission">Admission</a> 
+        <a href="#courses">Courses</a> 
+        <a href="#thoughts">Thoughts</a> 
+    -->
+      <button id="themeToggle" class="theme-toggle">
+        🌙 Dark
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="courses">
+
+<h1>My Review of DVA (CSE6242) Data & Visual Analytics</h1>
+
+<pre>
+           Grade: A 
+      Difficulty: 4/10 
+          Rating: 6/10 
+ Time commitment: 13 hours/week 
+-------------------------------
+</pre>
+<br>
+
+<h2>Overall</h2>
+This course has a heavy workload. Not difficult but it's super time consuming. This is the only course in the whole omscs/omsa program that I pulled all nighters (twice !). It's also, by design, a 'breadth' course to expose students to various aspects/tools of data analysis and visualization. 
+<br><br>
+
+<h2>Assignments</h2>
+
+<ul>
+<li>
+<b>Homework:</b> 50% of course grade. I liked them because these are all mini "software engineering" projects where you can just have fun making things work with lots of coding. Sure they are time consuming and you have to quickly learn entirely new sets of technology framework for every homework. But you can just google and find lots of templates & examples. You don't need to make it pretty, just need to get things to work. 
+  <ul>
+  <li>  HW1: Collecting & visualizing data, SQLite, D3 warmup, OpenRefine  </li>
+  <li>  HW2: D3 Graphs and Visualization, Tableau  </li>
+  <li>  HW3: Hadoop, Spark, Docker, DataBricks, Cloud Services (AWS, GCP, Azure) </li>
+  <li>  HW4: PageRank, Random Forest, Scikit-Learn  </li>
+  </ul>
+</li>
+
+<li>
+<b>Group Project:</b>  50% of course grade. This is a huge semester long project. You deliver (1) proposal, (2) progress report, and (3) final report. I cannot stress enough that the quality of your team mates will make a difference between heaven and hell. There is a lot of flexibility in what topic your group works on, as long as the project has 
+  <ul>
+  <li> Real & large dataset  </li>
+  <li> Non trivial computational analysis/algorithms  </li>
+  <li> Interactive visual user interface  </li>
+  </ul>
+</li>
+</ul>
+<br>
+
+<h2>Grading</h2>
+
+Grading is not too strict, maybe on a relatively generous side. But this kinda depends on which TA grades you. They do give a bit of extra credit opportunities, which was nice. 
+<br><br>
+
+<h2>Thoughts</h2>
+
+I thought the homework assignments were all reasonably well crafted to get students hands-on with the relevant concepts/techniques from the lecture. I've never had to implement a front-end dashboard in my career so it was interesting. 
+<br><br>
+
+I should give credit to the course instructor (prof. Polo Chau & Dr. Max Mahdi Roozbahanire) who wrote the syllabus because I could tell they sincerely tried to address all the questions. For example, they explain in length why they don't release homework early, why they don't release homework solutions, and why they don't allow a solo option for group projects. I may not agree with their philosophy, but at least I appreciate them explaining it.
+<br><br>
+
+<h2>Reference</h2>
+
+Syllabus : <a href="https://omscs.gatech.edu/cse-6242-data-and-visual-analytics" target="_blank">https://omscs.gatech.edu/cse-6242-data-and-visual-analytics</a>
+
+    </section>
+
+<br><hr><section class="footer">&copy; etlq - All Rights Reserved</section>
+
+</main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initial theme                                                                                                                                              
+    if (savedTheme) {
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      document.body.classList.toggle('dark', prefersDark);
+    }
+
+    updateButton();
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      const theme = document.body.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      localStorage.setItem('theme', theme);
+      updateButton();
+    });
+
+    function updateButton() {
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light'
+        : '🌙 Dark';
+    }
+  </script>
+
+</body>
+</html>

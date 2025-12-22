@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content=Georgia Tech OMSCS CS 7637 Knowledge based Artificial Intelligence course review, homework, assignment, exam, grading name='description'/>
+  <title>Review of OMSCS CS 7637 Knowledge based Artificial Intelligence</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+    <!--  <a href="#" class="back">←</a> -->
+
+      <span class="header-title"><a href="https://etlq.github.io/">My review of everything</a></span>
+
+      <nav class="menu">
+    <!-- 
+        <a href="#admission">Admission</a> 
+        <a href="#courses">Courses</a> 
+        <a href="#thoughts">Thoughts</a> 
+    -->
+      <button id="themeToggle" class="theme-toggle">
+        🌙 Dark
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="courses">
+
+<h1>My review of KBAI (CS7637) Knowledge based Artificial Intelligence</h1>
+
+<pre>
+           Grade: A
+      Difficulty: 2/10
+          Rating: 2/10
+ Time commitment: 10 hours/week
+-------------------------------
+</pre>
+<br>
+
+<h2>Overall</h2>
+
+I took this course in my first semester, together with Computer Networks (CS6250).
+<br><br>
+
+This is a survey course broadly covering various KBAI concepts. Often they are super abstract. At many points it feels like a cognitive science course, rather than a computer science course, which is not necessarily a bad thing as you get to study how these disciplines overlap in the context of AI.
+<br><br>
+
+Overall, the workload is somewhat time consuming, but not hard at all. No hard math, no hard algorithms (although you get to implement some in the project). 
+<br><br>
+
+<h2>Assignments</h2>
+
+<ul>
+<li>
+<b>Homework assignments:</b>
+  <ul>
+  <li> 
+  Each assignment asks you to write a report (just a few pages) about a topic corresponding to the weekly lecture. You will need to discuss it using the language/concepts from the lecture.  
+  </li>
+  </ul>
+</li>
+
+<li>
+<b>Midterm/final exams:</b>
+  <ul>
+  <li>
+  Proctored & timed exams. Multiple choice format. Open-book, open-notes, open-internet, not live interaction with other human beings. These are mostly control-F exercise.
+  </li>
+  </ul>
+</li>
+
+<li>
+<b>Project:</b>
+  <ul>
+  <li>
+  A semester long project that splits into a few milestones. All about solving the RPM (raven's progressive matrix) puzzles. They test your solver against in-sample and out-of-sample data to decide the score. A lot of programming in python (or java). The project can be super time consuming. It took me 40 hours on the first milestone, then approx. 10 hours for each of the rest. 
+  </li>
+  </ul>
+</li>
+</ul>
+<br>
+
+<h2>Grading</h2>
+
+Generally lenient & reasonable. As long as you can allocate enough time, it's an easy A. 
+<br><br>
+
+<h2>Thoughts</h2>
+
+Personally, I didn't like this course overall.
+
+<ul>
+<li>
+<b>What I liked:</b>
+  <ul>
+  <li>
+  I enjoyed the coding part of the project, which gives you a non-trivial and interesting logic problem (RPM puzzle), then gives you freedom to explore various approaches to solve it. 
+  </li>
+  <li>
+  The course is well organized. The assignment instructions are clear and well communicated. 
+  </li>
+  </ul>
+</li>
+
+<li>
+<b>What I didn't like:</b>
+  <ul>
+  <li>
+  The lecture videos are extremely abstract. They give you a 2000 feet view of KBAI concepts, while the project is a 2 feet view exercise. They feel sooo disconnected. I could just work on RPM solver as an interesting logic problem without ever watching any of the lecture, and be totally fine. Then what are students even learning ?  In contrast, for example, a course like CS6200 GIOS does an excellent job of connecting the lecture content to the coding projects. It really makes a difference in the learning outcome. 
+  </li>
+  <li>
+  The course has a lot of writing. Often it feels like I'm writing something for the sake of writing something. But it's a matter of teaching style. 
+  </li>
+  </ul>
+</li>
+
+<li>
+<b>KBAI is a Joyner course:</b>
+  <ul>
+  <li>
+  KBAI is taught by prof. David Joyner. Any Joyner course is a great first course to ease into the program, because his course is always impressively well organized. There are a handful of courses in the program that are poorly managed, but not his course. Another defining characteristic of a Joyner course is an insane amount of writing assignment, which has a polarized reception. Regardless, every student should take at least one Joyner course. He is a teacher who truly cares about student experience.
+  </li>
+  </ul>
+</li>
+</ul>
+<br>
+
+<h2>Reference</h2>
+
+Syllabus : <a href="https://omscs.gatech.edu/cs-7637-knowledge-based-artificial-intelligence-cognitive-systems" target="_blank">https://omscs.gatech.edu/cs-7637-knowledge-based-artificial-intelligence-cognitive-systems</a>
+
+
+    </section>
+
+<br><hr><section class="footer">&copy; etlq - All Rights Reserved</section>
+
+</main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initial theme                                                                                                                                              
+    if (savedTheme) {
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      document.body.classList.toggle('dark', prefersDark);
+    }
+
+    updateButton();
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      const theme = document.body.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      localStorage.setItem('theme', theme);
+      updateButton();
+    });
+
+    function updateButton() {
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light'
+        : '🌙 Dark';
+    }
+  </script>
+
+</body>
+</html>

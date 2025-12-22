@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content=Georgia Tech OMSCS OMSA MGT 8813 Financial Modeling course review, excel, homework, group projects name='description'/>
+  <title>Review of OMSA MGT 8813 Financial Modeling</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+    <!--  <a href="#" class="back">←</a> -->
+
+      <span class="header-title"><a href="https://etlq.github.io/">My review of everything</a></span>
+
+      <nav class="menu">
+    <!-- 
+        <a href="#admission">Admission</a> 
+        <a href="#courses">Courses</a> 
+        <a href="#thoughts">Thoughts</a> 
+    -->
+      <button id="themeToggle" class="theme-toggle">
+        🌙 Dark
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="courses">
+
+<h1>My Review of FM (MGT 8813) Financial Modeling</h1>
+
+<pre>
+           Grade: A 
+      Difficulty: 1/10
+          Rating: 5/10 
+ Time commitment: 5 hours/week
+------------------------------
+</pre>
+<br>
+
+<h2>Overall</h2>
+
+A perfect summer course to relax, or it can easily be paired with another course during regular semester. I took this course because I was interested in the subject. The course teaches you the basics of corporate financial statements: balance sheet, income statement and cashflow statements. They also give a mini lesson on options pricing and portfolio optimization.
+<br><br>
+
+<h2>Lecture quality</h2>
+
+The professor Garner previously taught at Wharton school of UPenn, and is knowledgeable of financial statements and valuation methodology. But the lecture doesn't really dive into details. Instead the lecture spent way too much time on Excel exercise. They spent almost 4 weeks on nothing but learning Excel functions/VBA.
+<br><br>
+
+I understand investment bankers build DCF (discounted cash flow) valuation models on Excel spreadsheet, but it was super boring to watch the weekly lecture video going on for hours just tirelessly typing in financial statement numbers on the spreadsheet.
+<br><br>
+
+Maybe it's not the criticism of the lecture quality. Maybe I'm just pointing out how tediously laborious and unsexy the investment banker's work is. 
+<br><br>
+
+<h2>Assignments</h2>
+
+<ul>
+<li>
+<b>5 homework assignments</b> (8% each):  Each homework consists of quiz (multiple choice format) and Excel exercise. All open-book, untimed, and auto-graded. It's not hard but the Excel exercise can be tricky, because often one cell depends on other upstream cells you populated. So a tiny mistake on an upstream cell can corrupt downstream cells and potentially cost you a lot of points. 
+</li>
+
+<li>
+<b>4 group projects</b> (15% each):  This is about building a company valuation model on Excel spreadsheet as a team. This was so stressful, because dividing up work between team members to fill Excel spreadsheets is messy. All these cells are dependent on each other. Sometimes the requirement was to implement a circular reference between hundreds of cells for complex financial calculation. Your cryptic Excel error may come from other cells implemented by team mates. 
+</li>
+</ul>
+<br>
+
+<h2>Grading</h2>
+
+Everything is auto graded, even the Excel files you submit. TAs wrote python scripts that check all the cells against the expected values. 
+<br><br>
+
+There is no curve. The professor went on a rant on how she does not believe in applying a grading curve. So you must secure 90% as a hard threshold for an A. I think it's easily doable, but just have to be careful about bugs on Excel worksheet. Be ready to take over extra work if your team mates don't complete their tasks.
+<br><br>
+
+<h2>Thoughts</h2>
+
+Group project is a headache. I wish they got rid of it. Building Excel spreadsheet for financial statement analytics is not conducive to group effort. Just the overhead of coordinating with other students from different parts of the world was so unproductive. I had lazy team mates. One guy disappeared in the middle of the semester (we eventually found out he dropped out after we escalated to TA), and others were last minute rushers. 
+<br><br>
+
+Excel itself can be annoying. There will always be some nuance you have to debug. For example, the lecture video tutorials assume Excel ver. 2018, but your student account Excel is likely Excel ver 2025 or newer. Some of the function names & syntax have changed. Also you may get weird error message and debug for 2 hours, reviewing all your financial accounting implementation across 800 cells, only to realize this new version of Excel default config enables this random parameter deep in the settings which prevented you from making a circular reference. So you have to go explicitly disable it. etc etc. But it's not too bad. I guess I just don't like typing accounting numbers for hours on Excel spreadsheets.
+<br><br>
+
+Overall, it is an easy course. I got 98+% score in total. 
+<br><br>
+
+This is not a CS nor stats course. It is a business school course. It will be excruciatingly boring if you don't have an interest in the subject matter. 
+<br><br>
+
+<h2>FAQ</h2>
+
+<ul>
+<li>
+The syllabus recommends taking MGT 8803/6754 as a soft prerequisite. Is it really necessary ?
+  <ul>
+  <li>
+  Not at all. Absolutely not. This class is so easy in terms of academic content. The only tricky part is working with Excel. 
+  </li>
+  </ul>
+</li>
+
+<li>
+Can I use Python or other languages instead of Excel ?
+  <ul>
+  <li>
+  No. Microsoft Excel is so ingrained into the lecture/homework that they will need to do a complete overhaul of the course to allow other languages. 
+  </li>
+  </ul>
+</li>
+</ul>
+<br>
+
+<h2>Reference</h2>
+
+Syllabus : <a href="https://omscs.gatech.edu/mgt-8813-financial-modeling" target="_blank">https://omscs.gatech.edu/mgt-8813-financial-modeling</a>
+
+    </section>
+
+<br><hr><section class="footer">&copy; etlq - All Rights Reserved</section>
+
+</main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initial theme                                                                                                                                              
+    if (savedTheme) {
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      document.body.classList.toggle('dark', prefersDark);
+    }
+
+    updateButton();
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      const theme = document.body.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      localStorage.setItem('theme', theme);
+      updateButton();
+    });
+
+    function updateButton() {
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light'
+        : '🌙 Dark';
+    }
+  </script>
+
+</body>
+</html>

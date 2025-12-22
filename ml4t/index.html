@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content=Georgia Tech OMSCS CS 7646 ML4T Machine Learning for Trading course review, homework, exam, grading name='description'/>
+  <title>Review of OMSCS CS 7646 Machine Learning for Trading</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+    <!--  <a href="#" class="back">←</a> -->
+
+      <span class="header-title"><a href="https://etlq.github.io/">My review of everything</a></span>
+
+      <nav class="menu">
+    <!-- 
+        <a href="#admission">Admission</a> 
+        <a href="#courses">Courses</a> 
+        <a href="#thoughts">Thoughts</a> 
+    -->
+      <button id="themeToggle" class="theme-toggle">
+        🌙 Dark
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="courses">
+
+<h1>My Review of ML4T (CS7646) Machine Learning for Trading</h1>
+
+<pre>
+           Grade: A 
+      Difficulty: 2/10 
+          Rating: 10/10 
+ Time commitment: 8 hours/week 
+------------------------------
+</pre>
+<br>
+
+<h2>Overall</h2>
+
+I took ML4T as my 6th course. It turned out this became my favorite course in the entire omscs program. The course splits into 3 modules: (1) pandas/numpy market data processing, (2) stock investment framework, (3) ML applied to stock trading. Each of these topics is a huge subject and can easily be a course of its own. But ML4T managed to condense them all into one course.
+<br><br>
+
+<h2>Lecture quality</h2>
+
+I thought the lecture quality was excellent. The professor Tucker Balch is truly knowledgeable on both quant investment principles and ML algorithms. He left his tenure at GT to join JP Morgan and led their AI Research team. This kind of job offer doesn't happen to random professors.
+<br><br>
+
+<h2>Assignments</h2>
+
+<ul>
+<li>
+<b>Projects:</b>  They have several projects that incrementally build on top of previous ones. They are mostly well defined mini python coding homework corresponding to the weekly lecture videos. You must write a report to summarize your implementation and experiment results.
+</li>
+
+<li>
+<b>Exams:</b>  One midterm and one final. Closed book. Not too difficult but not a cake walk either. The median score was like 78%. As long as you review both the lecture and assigned reading materials, it's not too hard to score 85~90%. The wording of questions are unnatural and verbose. I heard the instructor intentionally did it so students couldn't feed them into LLM.
+</li>
+</ul>
+<br>
+
+<h2>Grading</h2>
+
+The grading on project reports are extremely strict. For example, if they told you to round numbers to the 3rd decimal place, and if you rounded to the 2nd place, then they will have no mercy. There are pages and pages of detailed instructions about the report formatting. They call it JDF (<a href="https://www.overleaf.com/latex/templates/joyner-document-format-v2-dot-2/xysfjgnvxnqq" target="_blank">Joyner Document Format</a>). So you have to be careful. Otherwise it's easy to score 90+% on all projects. 
+<br><br>
+
+Another distinct aspect of grading in this course is that it's extremely slow. Many students (legitimately) complain about this. You barely get one assignment graded before the withdrawal deadline and it's hard to evaluate your performance in the course until much later in the semester. Also, because the projects incrementally build on previous projects, the slow grading means students don't get feedback on early projects until several projects later.
+<br><br>
+
+<h2>Thoughts</h2>
+
+I thought the projects were well designed. Building an ML trading engine (even if it's a toy example) is an overwhelmingly complex task, involving so many components such as data ingestion pipeline, model, portfolio optimizer, backtest simulator, and analytics/visualization. But they carefully crafted each mini project so that you implement piece by piece throughout the semester. Each project may feel like a relatively small scale task but you can learn a lot about the concepts while getting hands-on with pandas/numpy.
+<br><br>
+
+I know some students complain the project instructions are annoyingly verbose. I understand the sentiment. But I personally liked it because they made it unambiguously clear on what they want you to implement. Also they give unlimited access to the autograder to verify the code, which was nice. 
+<br><br>
+
+One legitimate criticism of the course is they never go deep into either of finance or ML. But that's the design of the course. It's actually a good intro course for both subjects.
+<br><br>
+
+<h2>FAQ</h2>
+
+<ul>
+<li>
+How practical is the content ?  Will this course prepare me for a quant job ?
+  <ul>
+  <li>
+  It's a gentle but relevant introduction. If you are serious about making this your day job, then my recommendation is to get an MFE (masters in financial engineering) degree from top schools (think Columbia, CMU, Princeton, NYU, Baruch, etc)
+  </li>
+  </ul>
+
+<li>
+Are office hours useful ?
+  <ul>
+  <li>
+  I never attended any office hours. I think the course is structured so that any questions can be asked & answered on Piazza.
+  </li>
+  </ul>
+</li>
+</ul>
+<br>
+
+<h2>Reference</h2>
+
+Syllabus : <a href="https://omscs.gatech.edu/cs-7646-machine-learning-trading" target="_blank">https://omscs.gatech.edu/cs-7646-machine-learning-trading</a>
+
+
+    </section>
+
+<br><hr><section class="footer">&copy; etlq - All Rights Reserved</section>
+
+</main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initial theme                                                                                                                                              
+    if (savedTheme) {
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      document.body.classList.toggle('dark', prefersDark);
+    }
+
+    updateButton();
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      const theme = document.body.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      localStorage.setItem('theme', theme);
+      updateButton();
+    });
+
+    function updateButton() {
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light'
+        : '🌙 Dark';
+    }
+  </script>
+
+</body>
+</html>

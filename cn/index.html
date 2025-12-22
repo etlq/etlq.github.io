@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content=Georgia Tech OMSCS CS 6250 Computer Networks course review, homework, exam, project, grading name='description'/>
+  <title>Review of OMSCS CS 6250 Computer Networks</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+    <!--  <a href="#" class="back">←</a> -->
+
+      <span class="header-title"><a href="https://etlq.github.io/">My review of everything</a></span>
+
+      <nav class="menu">
+    <!-- 
+        <a href="#admission">Admission</a> 
+        <a href="#courses">Courses</a> 
+        <a href="#thoughts">Thoughts</a> 
+    -->
+      <button id="themeToggle" class="theme-toggle">
+        🌙 Dark
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="courses">
+
+<h1>My Review of CS6250 Computer Networks</h1>
+
+<pre>
+           Grade: A
+      Difficulty: 2/10
+          Rating: 7/10
+ Time commitment: 8 hours/week
+------------------------------
+</pre>
+<br>
+
+<h2>Overall</h2>
+
+Great lecture videos, covering all the computer network fundamentals and some advanced materials. They cover switching, routing protocols & algorithms, IGP/BGP topology, naming (DNS), addressing (DHCP), congestion control, traffic/flow measurement, TCP/UDP layer mechanics, distribution (CDN), simulation (SDN: software defined network), network security (various forms of attacks including DDoS), firewall, with some applications layer topics (HTTP and web caching). 
+<br><br>
+
+To fully digest the content, it requires significant time commitment. I spent so much time watching the lecture video, often pausing to take detailed notes along the way. It turns out the lecture video was not so necessary to do the assignments. Overall an easy & fun course.
+<br><br>
+
+<h2>Assignments</h2>
+
+<ul>
+<li>
+Python coding assignments are mostly about figuring out API syntax on SDN simulator. They get you hands-on with actual network topology configuration and trouble shooting. e.g. how to automate DoS mitigation, flow control & measurement. TAs give you plenty of tips and guidance in terms of what to implement. I found this a lot of fun. 
+</li>
+
+<li>
+Open book quizzes & closed book exams. Some questions had tricky wording but overall not hard to score 90+% as long as you review the lecture.
+</li>
+</ul>
+<br>
+
+<h2>Thoughts</h2>
+
+Overall I enjoyed this course. It's fairly comprehensive and also goes into a lot of practical problems, like how BGP gets attacked, how DNS gets attacked, how to guard against different types of attacks, so on. But my affinity to the subject is biased since I come from a networking background (published a peer reviewed IEEE conference paper on wireless sensor network protocol virtualization), and have worked on low latency real time market data distribution systems in my day job.
+<br><br>
+
+For someone who does not work in network/infra, the course topics may be foreign and may feel boring.
+<br><br>
+
+I think this is a good first course, assuming you have at least some interest in networking, since it's a conventional CS course with manageable workload.
+<br><br>
+
+<h2>Reference</h2>
+
+Syllabus : <a href="https://omscs.gatech.edu/cs-6250-computer-networks" target="_blank">https://omscs.gatech.edu/cs-6250-computer-networks</a>
+
+    </section>
+
+<br><hr><section class="footer">&copy; etlq - All Rights Reserved</section>
+
+</main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initial theme                                                                                                                                              
+    if (savedTheme) {
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      document.body.classList.toggle('dark', prefersDark);
+    }
+
+    updateButton();
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      const theme = document.body.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      localStorage.setItem('theme', theme);
+      updateButton();
+    });
+
+    function updateButton() {
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light'
+        : '🌙 Dark';
+    }
+  </script>
+
+</body>
+</html>
