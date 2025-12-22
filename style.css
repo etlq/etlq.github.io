@@ -1,0 +1,265 @@
+/* ---------- Reset & Base ---------- */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hr {
+  border-color: #f5f5f5;
+}
+
+/* ---------- Header ---------- */
+
+.header {
+  position: sticky;
+  top: 0;
+  background: #337ab7;
+  color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.header-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  gap: 16px;
+}
+
+.header-inner a {
+  color: #ffffff;
+}
+
+.back {
+  font-size: 20px;
+  text-decoration: none;
+  color: #555;
+}
+
+.header-title {
+  font-size: 18.5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  gap: 12px;
+  margin-left: auto;
+  color: #ffffff;
+}
+
+.menu a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* Theme toggle */
+.theme-toggle {
+  margin-left: 8px;
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color:#ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ---------- Layout ---------- */
+
+.container {
+  max-width: 900px;
+  margin: 22px auto;
+  padding: 0 16px;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 40px;
+  color: #444;
+  transition: color 0.3s ease;
+}
+
+/* ---------- Cards ---------- */
+
+.card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 22px 28px 28px;
+  margin-bottom: 3px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 14.5px;
+}
+
+.card h1 {  
+  font-size: 21.5px;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  font-size: 19.5px;
+  margin-bottom: 3px;
+}
+
+.card h3 {
+  font-size: 17.5px;
+  margin-bottom: 3px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+table {
+    /* Collapses the borders into a single border line */
+    border-collapse: collapse; 
+    /* width: 80%; */  /* Optional: Adjusts table width */
+    margin-top: 15px; /* Optional: Adds some spacing around the table */
+}
+
+/* Apply borders to the table, header cells, and data cells */
+table, th, td {
+    border: 1px solid #ddd; /* Light gray border color */
+    /* border-color:#ddd; */  /* Light gray border color */
+    padding: 1.5px 7px; /* Optional: Adds space inside the cells */
+    text-align: left; /* Optional: Aligns text to the left */
+}
+
+/* Style the table headers (th) */
+thead th {
+    background-color: #f2f2f2; /* A light shade of gray */
+    color: #333; /* Optional: Text color for better contrast */
+    font-weight: bold;  /* Optional: Ensures headers are bold */
+}
+
+pre {
+    font-size: 0.85em;
+}
+
+/* Lists */
+ul {
+  padding-left: 30px;
+  list-style-type: disc;
+}
+
+ol {
+  padding-left: 30px;
+}
+
+ul ul {
+  padding-left: 20px;
+  list-style-type: circle;
+}
+
+li {
+  /* display: block; */
+  padding-left: 1px;
+  margin-bottom: 0.6px;
+}
+
+/* Links */
+a {
+  color: #1a73e8;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* --------- Footer ------- */
+
+.footer {
+  font-size:14.5px;
+  text-align:right;
+  margin: 2px;
+}
+
+/* ---------- Dark Mode ---------- */
+
+body.dark {
+  background: #121212;
+  color: #d6d6d6;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3 {
+  color: #e0e0e0;
+}
+
+body.dark .header {
+  background: #1e1e1e;
+  /* border-bottom-color: #333; */
+  border-bottom: 1px solid #c1c1c1;
+}
+
+body.dark .back,
+body.dark .menu a {
+  color: #ccc;
+}
+
+body.dark .theme-toggle {
+  border-color: #555;
+  color: #e0e0e0;
+}
+
+body.dark .page-title {
+  color: #eaeaea;
+}
+
+body.dark .card {
+  background: #1e1e1e;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+body.dark a {
+  color: #8ab4f8;
+  text-decoration: none;
+}
+
+body.dark a:hover {
+  text-decoration: underline;
+}
+
+body.dark hr {
+  border-color: #848484;
+}
+
+body.dark table, 
+body.dark th, 
+body.dark td {
+    border: 1px solid #848484;
+}
+
+/* Style the table headers (th) */
+body.dark thead th {
+    background-color: #adadad; /* A light shade of gray */
+    color: #333; /* Optional: Text color for better contrast */
+    font-weight: bold;  /* Optional: Ensures headers are bold */
+}
