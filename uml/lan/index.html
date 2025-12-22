@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content=UML University of Massachusetts Lowell Review of INFO 4610 LAN/WAN Technologies name='description'/>
+  <title>Review of INFO 4610 LAN/WAN Technologies</title>
+  <-- this "/style.css" specifies the root of the domain -->
+  <link rel="stylesheet" href="/style.css" />   
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+    <!--  <a href="#" class="back">←</a> -->
+
+      <span class="header-title"><a href="https://etlq.github.io/">My review of everything</a></span>
+
+      <nav class="menu">
+    <!-- 
+        <a href="#admission">Admission</a> 
+        <a href="#courses">Courses</a> 
+        <a href="#thoughts">Thoughts</a> 
+    -->
+      <button id="themeToggle" class="theme-toggle">
+        🌙 Dark
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="courses">
+
+<h1>My Review of (INFO 4610) LAN/WAN Technologies</h1>
+
+<pre>
+           Grade: A
+      Difficulty: 7/10
+          Rating: 6/10
+ Time commitment: 12 hours/week
+-------------------------------
+</pre>
+<br>
+
+This course has a massive amount of contents, covering all the fundamentals in meticulous detail. It felt like the instructor just dumped the entire content of an encyclopedically thick textbook. Honestly I was at times bored by the endless details of various laser types and their wave length, fiber optic cabling technology, electrical signal encoding/modulation methodology and so on. Maybe this content is more suited for EE major. Sometimes you spend an hour reading up on pages and pages of notes to reach a conclusive remark "this technology is no longer used, as replaced by XYZ which we study next."  Sure that's still relevant to study but the amount of content is of biblical proportion.. 
+<br><br>
+
+<h2>Assignments</h2>
+
+<ul>
+<li>
+<b>8 homework assignments</b> (30%):  All open-book, open-internet, untimed, multiple choice, take-home format. All auto graded. Questions are of moderate difficulty, and mostly directly from the lecture notes. I couldn't possibly remember every detail from the lecture notes so I was mostly doing control-F and additional googling. Each homework typically took me a few hours.
+</li>
+
+<li>
+<b>Exams</b>: One midterm (30%) and one final (30%). Open book, take-home, multiple choice format. There was really no meaningful distinction between weekly homework quizzes versus exams. Both exams were similar to the homework quizzes in terms of the questions and their difficulty.
+</li>
+
+<li>
+<b>Participation</b> (10%):  I personally didn't like how the instructor mandates at least 3 "substantial" posts to the class discussion forum per week for participation credit, but I understand his intention. It is a matter of teaching style, 
+</li>
+
+</ul>
+<br>
+
+<h2>Thoughts</h2>
+
+This course should be renamed as "L1/L2/L3 layer computer networks" to better reflect the lecture content. If you are a network engineer specializing in L3/L4 layers and want to know more about lower layers (L1/L2), then this will be an informative and educational course. The instructor (Edwin Barnes) was active in the course forum, and knowledgeable. 
+
+
+    </section>
+
+<br><hr><section class="footer">&copy; etlq - All Rights Reserved</section>
+
+</main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initial theme                                                                                                                                              
+    if (savedTheme) {
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      document.body.classList.toggle('dark', prefersDark);
+    }
+
+    updateButton();
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      const theme = document.body.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      localStorage.setItem('theme', theme);
+      updateButton();
+    });
+
+    function updateButton() {
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light'
+        : '🌙 Dark';
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content=UML University of Massachusetts Lowell Review of INFO 3600 Data Structures and Algorithms with C name='description'/>
+  <title>Review of INFO 3600 Data Structures and Algorithms with C</title>
+  <-- this "/style.css" specifies the root of the domain -->
+  <link rel="stylesheet" href="/style.css" />   
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+    <!--  <a href="#" class="back">←</a> -->
+
+      <span class="header-title"><a href="https://etlq.github.io/">My review of everything</a></span>
+
+      <nav class="menu">
+    <!-- 
+        <a href="#admission">Admission</a> 
+        <a href="#courses">Courses</a> 
+        <a href="#thoughts">Thoughts</a> 
+    -->
+      <button id="themeToggle" class="theme-toggle">
+        🌙 Dark
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="courses">
+
+<h1>My Review of (INFO 3600) Data Structures and Algorithms with C</h1>
+
+<pre>
+           Grade: A
+      Difficulty: 7/10
+          Rating: 8/10
+ Time commitment: 12 hours/week
+-------------------------------
+</pre>
+<br>
+
+A decent course on data structures & algorithms. Lots of well designed coding assignments. They are time-consuming but rewarding. The lecture extensively covers data structures (stacks, queues, arrays, linear linked lists, trees, graphs, hashing, heaps), and algorithms for manipulating these structures (various sort, search/traversal techniques with complexity analysis)
+
+<h2>Overview</h2>
+
+<ul>
+<li>
+Fundamentals
+  <ul>
+  <li>
+  C structs, arrays, linear/double linked lists
+  </li>
+  </ul>
+</li>
+
+<li>
+Stack
+  <ul>
+  <li>
+  Implementation abstraction
+  </li>
+  </ul>
+</li>
+
+<li>
+Queue 
+  <ul>
+  <li>
+  Priority queue, abstraction
+  </li>
+  </ul>
+</li>
+
+<li>
+Hash
+  <ul>
+  <li>
+  Collision avoidance, linear probing, clustering, chaining
+  </li>
+  </ul>
+</li>
+
+<li>
+Tree
+  <ul>
+  <li>
+  Binary search trees (BST), Self balancing trees (AVL trees, Red Black trees, B trees), A Trie
+  </li>
+  </ul>
+</li>
+
+<li>
+Graph
+  <ul>
+  <li>  Representations (adjacency matrix/list) </li>
+  <li>  Traversal: depth first search vs breadth first search (DFS vs BFS) </li>
+  <li>  Topological sort  </li>
+  <li>  Dijkstra's algo, Bellman Ford, Minimum spanning tree (Prim's algo, Kruskal's algo)  </li>
+  </ul>
+</li>
+
+<li>
+Sort
+  <ul>
+  <li> Bubble, insertion, shell, selection, radix, merge, heap, quick sort  </li>
+  </ul>
+</li>
+
+<li>
+Complexity analysis
+  <ul>
+  <li> Run time vs space complexity on various operations, big O notations </li>
+  </ul>
+</li>
+
+</ul>
+<br>
+
+<h2>Assignments</h2>
+
+<ul>
+<li>
+<b>9 homework assignments</b> (60%):  Heavy coding homework where you usually implement data structures and algorithms from scratch in C with a bit of complexity analysis such asymptotic versus amortized speed with big O notation like O(n*log(n)). It's overall fun but a lot of work. Each homework took me at least several hours, sometimes an entire weekend. You compile and submit a report that contains the code and your explanation of the experiment & results.
+</li>
+
+<li>
+<b>Exams</b>: One midterm (20%) and one final (20%). Closed book, timed, multiple choice format. Moderate difficulty. As long as you review the lecture notes, you will be fine. 
+</li>
+
+</ul>
+<br>
+
+<h2>Thoughts</h2>
+
+The content is great. It's exactly as you expect from a data structures and algo course. 
+<br><br>
+
+They provide a nice PDF lecture note on each topic. I still go back to them from time to time whenever I need to review. 
+<br><br>
+
+One negative aspect is the instructor (Thomas Kostizak) is extremely picky about the format of both code & reports for the homework. He has a mammoth spec doc about where to insert page break, blank page, what kind of test case, with specific types of annotation in specific font style/size, etc etc. So you end up submitting 20+ pages of PDF every week in which probably only 7 pages are code. 
+
+    </section>
+
+<br><hr><section class="footer">&copy; etlq - All Rights Reserved</section>
+
+</main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initial theme                                                                                                                                              
+    if (savedTheme) {
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      document.body.classList.toggle('dark', prefersDark);
+    }
+
+    updateButton();
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      const theme = document.body.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      localStorage.setItem('theme', theme);
+      updateButton();
+    });
+
+    function updateButton() {
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light'
+        : '🌙 Dark';
+    }
+  </script>
+
+</body>
+</html>

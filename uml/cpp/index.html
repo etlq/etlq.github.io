@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content=UML University of Massachusetts Lowell Review of INFO 2680 C++ Programming Language name='description'/>
+  <title>Review of INFO 2680 C++ Programming Language</title>
+  <-- this "/style.css" specifies the root of the domain -->
+  <link rel="stylesheet" href="/style.css" />   
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+    <!--  <a href="#" class="back">←</a> -->
+
+      <span class="header-title"><a href="https://etlq.github.io/">My review of everything</a></span>
+
+      <nav class="menu">
+    <!-- 
+        <a href="#admission">Admission</a> 
+        <a href="#courses">Courses</a> 
+        <a href="#thoughts">Thoughts</a> 
+    -->
+      <button id="themeToggle" class="theme-toggle">
+        🌙 Dark
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="courses">
+
+<h1>My Review of (INFO 2680) C++ Programming Language</h1>
+
+<pre>
+           Grade: B
+      Difficulty: 7/10
+          Rating: 8/10
+ Time commitment: 10 hours/week
+-------------------------------
+</pre>
+<br>
+
+This course offers an extensive tutorial of the C++ language: STL, namespace, class construction, operator overloading, virtual functions, templates, IO streams, and objected oriented paradigm (inheritance and its use in creating extendible libraries, encapsulation, polymorphism).
+<br><br>
+
+This course expects you to know C well, and jumps right into the nitty gritty details of C++. Also the course has lots of coding assignments.
+<br><br>
+
+<h2>Assignments</h2>
+
+<ul>
+<li>
+<b>5 homework assignments</b> (12% each):  Each homework focuses on specific topics from the corresponding weekly lectures. Typically took me several hours. A lot of coding. 
+</li>
+
+<li>
+<b>Project</b> (20%):  Implement a document management system with indexing and some meta attributes about each document. Here the goal is to implement an entire application with OOP principles, leveraging all of C++ features learnt from the lecture and homework assignments. 
+</li>
+
+<li>
+<b>Exam</b> (20%): One final exam. It's a take-home format. Approx. 15 questions to which you must write a concise but thorough answer in free text format. You need solid knowledge of C++. Questions are typically like "Why does the overloaded assignment operator need to check self assignment (especially in a class that holds pointers to dynamic resources) ?" 
+</li>
+</ul>
+<br>
+
+<h2>Thoughts</h2>
+
+Unlike other Umass programming courses, this course doesn't go crazy on code style enforcement. Just a very reasonable basic set of guidelines. I liked it. 
+
+The course content is amazing. It was created by Lance Smith who is among the highest rated instructors at Umass. But when I took this course, it was taught by a different instructor (Yelena Rykalova) who had horrible reviews according to ratemyprofessor.com. And she lived up to her infamous reputation. She occasionally docked points for random reasons (like how the code didn't compile for her specific configuration of visual studio, etc, while I provided step-by-step instruction of how to run my code, including the details on which version gnu compiler and linux OS I used). I didn't bother dispute the grade, and settled for a B.
+<br><br>
+
+Out of the 10 courses I took at Umass, this course was the only B. Don't let a bad instructor dissuade you from taking this otherwise rewarding class. 
+
+    </section>
+
+<br><hr><section class="footer">&copy; etlq - All Rights Reserved</section>
+
+</main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initial theme                                                                                                                                              
+    if (savedTheme) {
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      document.body.classList.toggle('dark', prefersDark);
+    }
+
+    updateButton();
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      const theme = document.body.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      localStorage.setItem('theme', theme);
+      updateButton();
+    });
+
+    function updateButton() {
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light'
+        : '🌙 Dark';
+    }
+  </script>
+
+</body>
+</html>
