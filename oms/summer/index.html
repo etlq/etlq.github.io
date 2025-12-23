@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content=OMSCS/OMSA : Georgia Tech summer semester is too short name='description'/>
+  <title>OMSCS/OMSA : Georgia Tech summer semester is too short</title>
+  <!-- this "/style.css" specifies the root of the domain -->
+  <link rel="stylesheet" href="/style.css" />   
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+    <!--  <a href="#" class="back">←</a> -->
+
+      <span class="header-title"><a href="https://etlq.github.io/">My review of everything</a></span>
+
+      <nav class="menu">
+    <!-- 
+        <a href="#admission">Admission</a> 
+        <a href="#courses">Courses</a> 
+        <a href="#thoughts">Thoughts</a> 
+    -->
+      <button id="themeToggle" class="theme-toggle">
+        🌙 Dark
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="courses">
+
+<h1>How to fix the summer semester "too short" problem</h2>
+
+Summer semester is too short. It has 12 weeks, while regular semesters are 17 weeks. Usually the final week of the semester is "a buffer week" reserved for TAs to finish grading the final exam/assignment. Thus, effectively, summer semester has 11 weeks, and regular semester has 16 weeks. This is a huge difference.
+<br><br>
+
+Quite a few courses are not offered during summer because of this time constraint. Some courses that get offered during summer adapt to this severely shortened schedule by dropping some content, while other courses simply "accelerate" everything. Either option is a compromise far from ideal, because you drop some precious content or make it brutally relentless.
+<br><br>
+
+For example, I took ISYE 6644 (Simulation) during regular semester. Its pacing was manageable so that I could take my time to really digest the lecture and work on weekly homework assignments. This class is also offered during summer and they don't cut content for the summer. I cannot possibly imagine doing this course in summer. It would be utterly relentless.. to the point where the learning suffers.  
+<br><br>
+
+For another example, CS 7643 (Deep Learning) drops one of the 4 assignments during summer. But the 4 assignments are the best part of the course where you really learn the material. I'm really glad I took this class during regular semester. It's unfortunate that students who take the course during summer semester get exposed to only 3/4 of the assignments.
+<br><br>
+
+They should make all 3 semesters 15 weeks each. It appears prof Joyner is of the same opinion. So it might happen in the future. 
+<br>
+<a href="https://www.reddit.com/r/OMSA/comments/1lfje8x/comment/myqkrk5/" target="_blank">https://www.reddit.com/r/OMSA/comments/1lfje8x/comment/myqkrk5/</a>
+
+
+    </section>
+
+<br><hr><section class="footer">&copy; etlq - All Rights Reserved</section>
+
+</main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initial theme                                                                                                                                              
+    if (savedTheme) {
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      document.body.classList.toggle('dark', prefersDark);
+    }
+
+    updateButton();
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      const theme = document.body.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      localStorage.setItem('theme', theme);
+      updateButton();
+    });
+
+    function updateButton() {
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light'
+        : '🌙 Dark';
+    }
+  </script>
+
+</body>
+</html>
