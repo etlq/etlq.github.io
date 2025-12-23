@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content=OMSCS/OMSA : Peer Grading is Prisoner's Dilemma name='description'/>
+  <title>OMSCS/OMSA : Peer Grading is Prisoner's Dilemma</title>
+  <!-- this "/style.css" specifies the root of the domain -->
+  <link rel="stylesheet" href="/style.css" />   
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+    <!--  <a href="#" class="back">←</a> -->
+
+      <span class="header-title"><a href="https://etlq.github.io/">My review of everything</a></span>
+
+      <nav class="menu">
+    <!-- 
+        <a href="#admission">Admission</a> 
+        <a href="#courses">Courses</a> 
+        <a href="#thoughts">Thoughts</a> 
+    -->
+      <button id="themeToggle" class="theme-toggle">
+        🌙 Dark
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="courses">
+
+<h1>[OMSCS/OMSA] Peer grading is prisoner's dilemma</h1>
+
+There are a few classes in both OMSCS & OMSA (especially for OMSA) where homework assignments are peer graded (also known as "peer review" or "peer feedback"). Typically, three (anonymized) class mates are randomly picked to grade your homework, while you also (anonymously) grade three other (also randomly selected) students. The median score among the three peer reviewers becomes your final homework score. 
+<br><br>
+
+The rationale given by the instructor/TA for this activity is "you can learn from studying your peer's work !"
+<br>
+While I understand the spirit of it, fundamentally, the incentive structure for peer grading is flawed. Because almost every class decides the overall course grade as quantile (aka "a curve"),  e.g. Top 30% students get A, next 30% gets B, so on. 
+<br>
+Then as a student, it is in your advantage to give the lowest possible score in peer grading. It's a textbook example of prisoner's dilemma. I don't want to give extremely harsh grading to my peers at all, but because I know they are forced by prisoner's dilemma, I'm also forced. 
+<br><br>
+
+I believe some courses like KBAI (CS 7637) and DMSL (ISYE 7406) give students an opportunity to see peer's submission. But the grading is still done by TAs. I think that's the best way to realize the "learn from peer's work" philosophy.
+<br><br>
+
+If the instructor/TA wants to use peer grading to reduce their workload, then communicate it as such, instead of sugar coating it. I will accept it. Realistically, Every class has several hundred students enrolled, and peer grading is the only way to keep the tuition affordable. Because the alternative is to hire an army of TAs, which would then drive up the cost. Hopefully, soon enough, we will have an AI/LLM based auto grader who is immune to prisoner's dilemma.
+<br><br>
+
+Note: peer grading homework is different from peer grading the contribution in group projects. I think peer grading in group projects incentivizes students to contribute better and be a good team mate in general, although <a href="https://etlq.github.io/omsa/group/" target="_blank">group project is another controversial subject</a>..
+<br><br>
+
+Note: In case I sounded critical, I don't mean to spread a negative vibe about OMSCS/OMSA. It's still an amazing program. It's just constructive criticism. 
+
+
+    </section>
+
+<br><hr><section class="footer">&copy; etlq - All Rights Reserved</section>
+
+</main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initial theme                                                                                                                                              
+    if (savedTheme) {
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      document.body.classList.toggle('dark', prefersDark);
+    }
+
+    updateButton();
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      const theme = document.body.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      localStorage.setItem('theme', theme);
+      updateButton();
+    });
+
+    function updateButton() {
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light'
+        : '🌙 Dark';
+    }
+  </script>
+
+</body>
+</html>
