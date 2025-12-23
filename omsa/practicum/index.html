@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content=GT OMSA : Practicum is terrible and should be made optional name='description'/>
+  <title>GT OMSA : Practicum is terrible and should be made optional</title>
+  <!-- this "/style.css" specifies the root of the domain -->
+  <link rel="stylesheet" href="/style.css" />   
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+    <!--  <a href="#" class="back">←</a> -->
+
+      <span class="header-title"><a href="https://etlq.github.io/">My review of everything</a></span>
+
+      <nav class="menu">
+    <!-- 
+        <a href="#admission">Admission</a> 
+        <a href="#courses">Courses</a> 
+        <a href="#thoughts">Thoughts</a> 
+    -->
+      <button id="themeToggle" class="theme-toggle">
+        🌙 Dark
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="courses">
+
+<h1>[GT OMSA] Practicum should be optional</h2>
+
+ISYE/MGT/CSE 6748 Applied Analytics Practicum is a mandatory 6-credit course. I appreciate the intention of the OMSA curriculum to offer students the practicum: real world industry project experience to apply knowledge to practice. Especially for early-career students, it serves as a mini internship, which could strengthen their resume. I've seen a review by a student who got a full time job offer from the company he did the practicum for. That's wonderful.
+<br><br>
+
+But for people who have years of professional experience, the practicum is not as beneficial. I'd rather just take two more courses instead. I'm not advocating the practicum to be eliminated. Just proposing it be made optional, similar to how core courses can be "opted-out" in the program.
+<br><br>
+
+Or alternatively, make the practicum a separate stand-alone certificate. A regular masters degree curriculum typically requires 10 courses. OMSA will be a 10-course degree without the practicum.
+<br><br>
+
+I'd be more supportive of the practicum if it offered great value such as publishing a research paper to an academic conference. But many reviews are critical of how it's just paying $2k for low effort analytics project that takes less time than a 3-credit course.
+<br><br>
+
+Here is a typical student experience of the practicum: <br>
+<ul>
+<li>
+<i>Practicum Was Extremely Disappointing</i><br>
+<a href="https://www.reddit.com/r/OMSA/comments/1psuom6/practicum_was_extremely_disappointing/" target="_blank">https://www.reddit.com/r/OMSA/comments/1psuom6/practicum_was_extremely_disappointing/</a>
+</li>
+</ul>
+<br><br>
+
+All in all, I know a subset of people get great value out of the practicum, while it's a waste of time & money for others. It's all the more reason to make it optional.
+<br><br>
+
+<h2>FAQ</h2>
+
+<ul>
+<li>
+Should I do the external or internal project for the practicum ?
+  <ul>
+  <li>
+  The words "external" and "internal" get confused a lot in the context of the practicum. Some people say external to mean the project they do with their own employers because it's external to GT sponsor company practicum, while some say internal to mean the same thing because it's internal to the company the students already work for.
+  </li>
+  <li>
+  The semantics aside, I think it's up to the students. If you can find a great project that you were going to work on regardless within your company, and if your employer is willing to treat it as the practicum, then go for it. Or if you want to try some project with other company to get a more diverse perspective and experience, that's fine too.
+  </li>
+  </ul>
+</li>
+</ul>
+
+
+    </section>
+
+<br><hr><section class="footer">&copy; etlq - All Rights Reserved</section>
+
+</main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initial theme                                                                                                                                              
+    if (savedTheme) {
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      document.body.classList.toggle('dark', prefersDark);
+    }
+
+    updateButton();
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      const theme = document.body.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      localStorage.setItem('theme', theme);
+      updateButton();
+    });
+
+    function updateButton() {
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light'
+        : '🌙 Dark';
+    }
+  </script>
+
+</body>
+</html>
