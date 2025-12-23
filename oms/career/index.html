@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content=How is the career support at GT OMSCS/OMSA ? name='description'/>
+  <title>How is the career support at GT OMSCS/OMSA ?</title>
+  <!-- this "/style.css" specifies the root of the domain -->
+  <link rel="stylesheet" href="/style.css" />   
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+    <!--  <a href="#" class="back">←</a> -->
+
+      <span class="header-title"><a href="https://etlq.github.io/">My review of everything</a></span>
+
+      <nav class="menu">
+    <!-- 
+        <a href="#admission">Admission</a> 
+        <a href="#courses">Courses</a> 
+        <a href="#thoughts">Thoughts</a> 
+    -->
+      <button id="themeToggle" class="theme-toggle">
+        🌙 Dark
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="courses">
+
+<h1>Career Service & Support at OMSCS/OMSA</h1>
+<hr>
+
+<h2>What kind of career support is available ?</h2>
+
+Both OMSCS & OMSA programs are aware of many students wanting career support, and they are making an effort.
+<br><br>
+
+They periodically send emails about job opportunities & internship. Typically along the line of "Company XYZ is hiring SWE / Data Scientist positions !"  I personally don't find them valuable, because you can find the same information on Linkedin also.
+<br><br>
+
+Also GT career service has online seminars to conduct mock job interviews, resume review, so on. This is very basic stuff, but useful for students who have no (or little) experience.
+<br><br>
+
+Occasionally, there are career fairs. Some are held onsite (on Atlanta campus) and others are hosted online (called 'virtual' career fairs). 
+<br><br>
+
+<h2>Are onsite/online career fairs worth attending ?</h2>
+
+I attended a virtual career fair once. It was underwhelming. You just listen to representatives from participating companies hosting generic Q & A sessions. You get to know what companies do, what the hiring process looks like, you can ask what their new employee training program looks like, etc.  Nothing special. 
+<br><br>
+
+These fairs are fun & useful when you are just starting career and want to broadly explore many companies across industries (and get a free t-shirt). But that's the extent of its use in my view.
+<br><br>
+
+<h2>Perspectives from the hiring side</h2>
+
+I've been on the other side of these career fairs. I gave presentations & spoke to students, representing my employer. Also, I've been involved with the recruiting and have conducted many resume screening, phone interviews and onsite interviews for both internship and full time positions. 
+<br><br>
+
+Just to put it into perspective, let me describe what it's like from the hiring side of the game. Typically, for any single position we want to fill, we receive 1000+ resumes. HR/ATS will filter them down to 100, and send them my way. I spend less than 1 minute on each resume, and filter them down to 10. Then I conduct quick phone screen interviews, to filter them down to 3. Then I get them to onsite interviews. If I like any of them, then I make recommendation to my manager who then will interview the candidate(s) to make the final hiring decision. 
+<br><br>
+
+I know many people complain about being "ghosted" which I totally understand. But in the above example scenario, 990 out of 1000 have been ghosted. That's 99% ghost rate. 
+<br><br>
+
+I know a hiring manager who doesn't have time to review 100 resumes and just randomly picks 5 candidates to review. I asked him "But what about the 95 resumes you just threw away ? You might have missed great candidates !", and he said "I don't want to work with unlucky people."
+<br><br>
+
+Just like that. This is why referral is a magic bullet that can penetrate through the barriers. Networking is as important as building skill.
+
+    </section>
+
+<br><hr><section class="footer">&copy; etlq - All Rights Reserved</section>
+
+</main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initial theme                                                                                                                                              
+    if (savedTheme) {
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      document.body.classList.toggle('dark', prefersDark);
+    }
+
+    updateButton();
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      const theme = document.body.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      localStorage.setItem('theme', theme);
+      updateButton();
+    });
+
+    function updateButton() {
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light'
+        : '🌙 Dark';
+    }
+  </script>
+
+</body>
+</html>

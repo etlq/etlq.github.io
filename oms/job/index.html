@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content=Will GT OMSCS/OMSA get me a SWE/DS job ? name='description'/>
+  <title>Will GT OMSCS/OMSA get me a SWE/DS job ?</title>
+  <!-- this "/style.css" specifies the root of the domain -->
+  <link rel="stylesheet" href="/style.css" />   
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+    <!--  <a href="#" class="back">←</a> -->
+
+      <span class="header-title"><a href="https://etlq.github.io/">My review of everything</a></span>
+
+      <nav class="menu">
+    <!-- 
+        <a href="#admission">Admission</a> 
+        <a href="#courses">Courses</a> 
+        <a href="#thoughts">Thoughts</a> 
+    -->
+      <button id="themeToggle" class="theme-toggle">
+        🌙 Dark
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="courses">
+
+<h1>Will OMSCS/OMSA help me get a SWE/DS job ?</h1>
+
+It's arguably the most frequently asked question. The answer is never yes or no, and it depends on many factors. The shortest answer is this degree will marginally improve the chance of a new job and/or promotion, but not magically.
+<br><br>
+
+I've seen a few inspirational success stories of career transition from OMSCS/OMSA students. Here is someone who transitioned from a middle school science teacher to an AI engineer in 2 years while doing OMSCS.  
+https://www.reddit.com/r/OMSCS/comments/1mmd0zg/my_omscs_exit_post_from_middle_school_science/
+<br><br>
+
+Realistically, a Georgia Tech degree will be just one-line item on your resume. The older you get, experience will be increasingly more important than degree name in general. Ultimately, it's the skill that gets you a job, not a degree. I know some students who got into OMSCS/OMSA thinking it's their golden ticket to a FAANG software engineer (or data scientist) job, and dropped out after they realized they got more direct return out of spending 4 months on LeetCode, rather than spending 3 years on this degree.
+<br><br>
+
+<h2>[OMSCS] Which specialization leads to a better job prospect ?</h2>
+<h2>[OMSA] Which track leads to a better job prospect ? (job security, better money)</h2>
+
+Many derivatives of this question have been asked. I understand the spirit of the question. But it's backward thinking. One should begin with innate intellectual curiosity which will guide career aspiration, then decide which 10 courses to take. 
+<br><br>
+
+There is no such thing as job security. Any job is expendable. The only way to be secure is to build valuable skillset and network through years of dedication & hard work, which I think is only attainable if you feel genuinely passionate about the work itself. 
+<br><br>
+
+It's hard to excel at something you don't love. Someone who doesn't like coding can get only so far by forcing himself to do OMSCS and grind on Leetcode practice problems, competing against people who love coding. If he manages to get a SWE job at FAANG, then what ?  Spend 10 hours everyday coding when he doesn't enjoy coding ?  Can he force himself to keep learning new things while his colleagues keep learning & growing, driven by natural curiosity & enthusiasm ?
+<br><br>
+
+I've been working in the financial industry (investment bank / hedge fund) for my entire career. Every year, many Ivy league school fresh graduates pour into the industry. Some of them are genuinely interested in the work: they love corporate financial accounting analysis, trading algorithms, derivative pricing, so on. But approx. 30% of them leave within a few years and never return to the industry. Their only motivations are prestige and money, which will only fuel a person for a few years. 
+<br><br>
+
+More often than not, a great successful career is merely a by-product of people relentlessly pursuing their curiosity at the intersection of their talent.
+
+    </section>
+
+<br><hr><section class="footer">&copy; etlq - All Rights Reserved</section>
+
+</main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initial theme                                                                                                                                              
+    if (savedTheme) {
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      document.body.classList.toggle('dark', prefersDark);
+    }
+
+    updateButton();
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      const theme = document.body.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      localStorage.setItem('theme', theme);
+      updateButton();
+    });
+
+    function updateButton() {
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light'
+        : '🌙 Dark';
+    }
+  </script>
+
+</body>
+</html>
