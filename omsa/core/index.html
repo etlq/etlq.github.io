@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content=GT OMSA : All basic and advance core courses should be made optional name='description'/>
+  <title>GT OMSA : All basic and advance core courses should be made optional</title>
+  <!-- this "/style.css" specifies the root of the domain -->
+  <link rel="stylesheet" href="/style.css" />   
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+    <!--  <a href="#" class="back">←</a> -->
+
+      <span class="header-title"><a href="https://etlq.github.io/">My review of everything</a></span>
+
+      <nav class="menu">
+    <!-- 
+        <a href="#admission">Admission</a> 
+        <a href="#courses">Courses</a> 
+        <a href="#thoughts">Thoughts</a> 
+    -->
+      <button id="themeToggle" class="theme-toggle">
+        🌙 Dark
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="courses">
+
+<h1>[GT OMSA] All core courses should be made optional</h1>
+
+I understand they want the program curriculum to have structure. But all 5 core courses should be made optional in my opinion. Just like OMSCS, they should allow more flexibility in the course selection.
+
+<h2>Basic core courses</h2>
+
+They do allow opt-out for the basic core courses (6501 iAM, 8803 BFA, 6040 iCDA). But not every one of them is easy to opt out. Especially for opting out MGT 8803, you must have previously completed university courses that cover the same content. But the 8803 content is so disconnected from the rest of the program and nothing builds on it. I think we should make it optional.
+<br><br>
+
+I know, I know,, the argument is analytics students should have exposure to the business concepts. But then it can be perfectly argued that, for example, analytics students should have exposure to Bayesian statistics as it provides a powerful framework for updating beliefs based on new evidence, which is particularly useful when dealing with uncertainty and prior knowledge. And therefore ISYE 6420 (Bayesian Statistics) should be mandatory. Or this argument can be made for just about any other courses in the program.
+<br><br>
+
+<h2>Advanced core courses</h2>
+
+As for the mandatory advanced core courses: MGT 6203 (DAB) and CSE 6242 (DVA), having taken both (and earned As), I feel they really could be made optional too. There is nothing in these two courses that other courses depend on.
+
+<h2>There should be more flexibility in the curriculum</h2>
+
+If the concern is, without core courses, students may not build solid foundation to succeed in the rest of the program, well then enforce more explicit pre-requisites for each course.  For example, it might look something like "To register for isye 6740, students must have successfully completed isye 6501 or show equivalent academic (or industry) experience."
+<br><br>
+
+The current structure of keeping 5 core courses mandatory and yet allowing students to to take whichever hard courses like HDDA, CDA, DL, DO as the first class is not making a lot of sense. 
+<br><br>
+
+The program demographic is diverse. We should facilitate more flexible curriculum for students to customize course selection to maximize their educational benefits. To this end, all OMSA courses should be made optional, and constrained only by track requirements.
+<br><br>
+
+Similarly, <a href="https://etlq.github.io/omsa/practicum" target="_blank">the practicum should be made optional</a> in my opinion.
+<br><br>
+
+<h2>Reference</h2>
+OMSA curriculum grid : <a href="https://pe.gatech.edu/media/document/omsa-analytics-curriculum-gridpdf" target="_blank">https://pe.gatech.edu/media/document/omsa-analytics-curriculum-gridpdf</a>
+
+    </section>
+
+<br><hr><section class="footer">&copy; etlq - All Rights Reserved</section>
+
+</main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initial theme                                                                                                                                              
+    if (savedTheme) {
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      document.body.classList.toggle('dark', prefersDark);
+    }
+
+    updateButton();
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      const theme = document.body.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      localStorage.setItem('theme', theme);
+      updateButton();
+    });
+
+    function updateButton() {
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light'
+        : '🌙 Dark';
+    }
+  </script>
+
+</body>
+</html>

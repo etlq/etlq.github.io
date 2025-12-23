@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content=GT OMSCS/OMSA : Knack Free Tutor Service by Georgia Tech name='description'/>
+  <title>GT OMSCS/OMSA : Knack Free Tutor Service by Georgia Tech</title>
+  <!-- this "/style.css" specifies the root of the domain -->
+  <link rel="stylesheet" href="/style.css" />   
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+    <!--  <a href="#" class="back">←</a> -->
+
+      <span class="header-title"><a href="https://etlq.github.io/">My review of everything</a></span>
+
+      <nav class="menu">
+    <!-- 
+        <a href="#admission">Admission</a> 
+        <a href="#courses">Courses</a> 
+        <a href="#thoughts">Thoughts</a> 
+    -->
+      <button id="themeToggle" class="theme-toggle">
+        🌙 Dark
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="courses">
+
+<h1>Knack Free Tutor Service by Georgia Tech</h1>
+
+Georgia Tech offers free tutor service for students on a platform called Knack. <br>
+<a href="https://grad.gatech.edu/knack-tutoring" target="_blank">https://grad.gatech.edu/knack-tutoring</a>
+<br>
+
+It's free to students because the tutors are hired & paid by GT, and they are verified to be students who previously took the course and earned letter grade A.
+<br><br>
+
+Unfortunately, not every course is eligible. Among the OMS courses, I've seen CSE 6040, ISYE 6414, ISYE 6740, ISYE 6669 being available on Knack.  They really should make more courses available on Knack.
+<br><br>
+
+<h2>My experience using Knack tutoring service</h2>
+
+I've used it many times, and found it super useful. Because the tutors went through (mostly) the same homework and exams in precious semesters, they really know how to best study and prepare for each specific assignment. My tutor definitely helped me score better. 
+<br><br>
+
+For example, for both 6414 (Regression) and 6669 (Deterministic Optimization), I got the overall 90+% score to barely secure an A right around the cutoff threshold. I probably would've ended up with a B without my tutor's help.
+
+
+    </section>
+
+<br><hr><section class="footer">&copy; etlq - All Rights Reserved</section>
+
+</main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initial theme                                                                                                                                              
+    if (savedTheme) {
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      document.body.classList.toggle('dark', prefersDark);
+    }
+
+    updateButton();
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      const theme = document.body.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      localStorage.setItem('theme', theme);
+      updateButton();
+    });
+
+    function updateButton() {
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light'
+        : '🌙 Dark';
+    }
+  </script>
+
+</body>
+</html>
