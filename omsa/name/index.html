@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content=OMSA : Should we change the degree name Analytics to Data Science ? name='description'/>
+  <title>OMSA : Should we change the degree name Analytics to Data Science ?</title>
+  <!-- this "/style.css" specifies the root of the domain -->
+  <link rel="stylesheet" href="/style.css" />   
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+    <!--  <a href="#" class="back">←</a> -->
+
+      <span class="header-title"><a href="https://etlq.github.io/">My review of everything</a></span>
+
+      <nav class="menu">
+    <!-- 
+        <a href="#admission">Admission</a> 
+        <a href="#courses">Courses</a> 
+        <a href="#thoughts">Thoughts</a> 
+    -->
+      <button id="themeToggle" class="theme-toggle">
+        🌙 Dark
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="courses">
+
+<h1>[OMSA] Should we change the degree name "Analytics" ?</h1>
+
+This comes up all the time. I think it's a legitimate question. "Analytics" as a degree name is not widely recognized across industries, and can easily get filtered by HR/ATS. I've seen it happen in my industry (and I'm talking about top investment banks & hedge funds).
+<br><br>
+
+I think a more commonly accepted term is "Data Science." I understand OMSA director prof Sokol explained that DS is a buzzword, and likely will be replaced by a new buzzword in 10 years. But that's the point, The program should adapt to the evolving landscape.
+<br><br>
+
+For example, CMU used to have a masters degree program called "Large Information Systems" when the term Data Science didn't exist. But they renamed the degree to "Computational Data Science." The fact that so many other universities renamed the degree to Data Science and also how so many OMSA students present this degree as "Data Science" (or something similar) on their resume indicate the name change is worthy of serious consideration. 
+
+    </section>
+
+<br><hr><section class="footer">&copy; etlq - All Rights Reserved</section>
+
+</main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initial theme                                                                                                                                              
+    if (savedTheme) {
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      document.body.classList.toggle('dark', prefersDark);
+    }
+
+    updateButton();
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      const theme = document.body.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      localStorage.setItem('theme', theme);
+      updateButton();
+    });
+
+    function updateButton() {
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light'
+        : '🌙 Dark';
+    }
+  </script>
+
+</body>
+</html>
