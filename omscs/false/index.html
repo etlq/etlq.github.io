@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content=OMSCS/OMSA : False accusation of plagiarism is real threat name='description'/>
+  <title>OMSCS/OMSA : False accusation of plagiarism is real threat</title>
+  <!-- this "/style.css" specifies the root of the domain -->
+  <link rel="stylesheet" href="/style.css" />   
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+    <!--  <a href="#" class="back">←</a> -->
+
+      <span class="header-title"><a href="https://etlq.github.io/">My review of everything</a></span>
+
+      <nav class="menu">
+    <!-- 
+        <a href="#admission">Admission</a> 
+        <a href="#courses">Courses</a> 
+        <a href="#thoughts">Thoughts</a> 
+    -->
+      <button id="themeToggle" class="theme-toggle">
+        🌙 Dark
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="courses">
+
+<h1>False accusation of plagiarism is real threat</h2>
+
+It's real systemic risk in OMSCS/OMSA. I know it happened to quite a few students.
+
+<ul>
+<li>
+<i>OSI False Accusation Survivor with Advice</i> <br>
+https://www.reddit.com/r/OMSCS/comments/1h21nsz/osi_false_accusation_survivor_with_advice/
+</li>
+<li>
+<i>100% Win Rate: How We Fought and Won Against False Plagiarism Allegations in CS6515</i> <br>
+https://www.reddit.com/r/OMSCS/comments/1h1g3xj/100_win_rate_how_we_fought_and_won_against_false/
+</li>
+</ul>
+<br>
+
+Ever since I saw these horror stories, I'm so worried about getting falsely flagged. Even if you are innocent, if they say your code matched other student's code by 80%, then you may not have evidence to prove innocence.
+<br><br>
+
+Some students check in code with github frequently to have a granular log of progress, while others use an IDE that keeps taking snapshots of code every 10 minutes. That's a good idea, although it doesn't reduce the risk from getting falsely accused, but increases the chance of winning the litigation once false accusation happens.
+<br><br>
+
+<h2>Proactive risk mitigating measure</h2>
+
+As a proactive risk mitigating measure, for every coding assignment, I spend substantial time making my code ugly.  Am I paranoid ?  No, it's a legitimate concern because a typical class has 500~1000 students. With homework questions like "load this csv, and fit a linear regression model, and plot the residual distribution" -- if I implement it in a straight forward way in 13 lines of Python code using scikit-learn library functions, I worry my code will almost identically match at least a few other students. It's just probabilistic inevitability.
+<br><br>
+
+Also I worry my code may match AI/LLM. So after I finish my implementation, I go ask ChatGPT and compare its result with mine. If they are looking similar, I change my code to protect myself from false accusation. Also I comment every line of my code with extremely verbose descriptions and reference to the library/API documentation, including something super trivial like using numpy.sum().
+<br><br>
+
+It's silly and I wish I didn't have to do it. But unless they tell me how else to better protect myself from false accusation, I will continue to do this. 
+<br><br>
+
+<h2>Meet MOSS</h2>
+
+I hear from class mates that MOSS is a commonly used tool to measure software similarity. 
+https://theory.stanford.edu/~aiken/moss/
+<br><br>
+
+Apparently, making variable names unique and adding lots of descriptive comments do not protect you from falsely accused by MOSS because MOSS only looks at the code logic. But hey, I think variable name and comments matter. Because when TAs review code that has been flagged as "high similarity score with other students", if they see a lot of comments explaining every step of the way, with its own variable naming convention, they may be less inclined to believe the code was plagiarized. 
+<br><br>
+
+Cheating is terrible, but false accusation of cheating is even worse.
+
+    </section>
+
+<br><hr><section class="footer">&copy; etlq - All Rights Reserved</section>
+
+</main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initial theme                                                                                                                                              
+    if (savedTheme) {
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      document.body.classList.toggle('dark', prefersDark);
+    }
+
+    updateButton();
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      const theme = document.body.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      localStorage.setItem('theme', theme);
+      updateButton();
+    });
+
+    function updateButton() {
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light'
+        : '🌙 Dark';
+    }
+  </script>
+
+</body>
+</html>

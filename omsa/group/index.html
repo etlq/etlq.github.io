@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content=OMSCS/OMSA : Group project in a high dropout rate program is nightmare by design name='description'/>
+  <title>OMSCS/OMSA : Group project in a high dropout rate program is nightmare by design</title>
+  <!-- this "/style.css" specifies the root of the domain -->
+  <link rel="stylesheet" href="/style.css" />   
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+    <!--  <a href="#" class="back">←</a> -->
+
+      <span class="header-title"><a href="https://etlq.github.io/">My review of everything</a></span>
+
+      <nav class="menu">
+    <!-- 
+        <a href="#admission">Admission</a> 
+        <a href="#courses">Courses</a> 
+        <a href="#thoughts">Thoughts</a> 
+    -->
+      <button id="themeToggle" class="theme-toggle">
+        🌙 Dark
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="courses">
+
+<h1>[OMSCS/OMSA] Group project in a high dropout rate program is nightmare by design</h1>
+
+It's arguably the worst part of both programs. Many courses have a group project often with the rationale "we want you to learn to work as a team."
+<br><br>
+
+While I appreciate the spirit of it, group project in an online program, especially as affordable and high dropout rate as OMSCS/OMSA, is a nightmare by design. 
+
+<ul>
+
+<li>
+<b>Logistical difficulty</b>: Students are geographically far apart, across different timezones. Even if they are in the same timezone, some work in the evening, while others work on weekends. It's a logistical challenge to coordinate.
+</li>
+
+<li>
+<b>Low Priority</b>: This is probably the biggest problem that ruins group project. In a cheap online class where most people have day jobs, the cost of failing/dropping a class is nothing compared to the on-campus class.
+  <ul>
+  <li>
+  In an online class, maybe you are supporting your family. Your work may get busy. Maybe a baby is on the way. Then simply drop the class, or do bare minimum to aim for B ~ C grades. The school is #3 ~ 5 in priority. 
+  </li>
+  <li>
+  In an on-campus class, almost everyone is a full time student (with majority being international students for GT on-campus MSCS program), paying thousands of dollars of tuition per class. Failing a class has severe consequence: huge financial loss, delayed graduation, which possibly jeopardizes the visa/scholarship status. The school is absolute #1 priority.
+  </li>
+  <li>
+  As such, the level of commitment by students is vastly different in an affordable online course.
+  </li>
+  </ul>
+</li>
+</ul>
+<br>
+
+OMSCS/OMSA accepts many students. According to this paper published by prof. Joyner, the acceptance rate is ~70% (compared to ~10% on campus), and graduation rate is ~50%. So, roughly speaking, one in every 2 students will drop out of the program. This is a very high dropout rate.
+
+<ul>
+<li>
+<i>"Retention in a MOOC-based degree program", David. A. Joyner, Proceedings of the Ninth ACM Conference on Learning at Scale</i> <br>
+<a href="https://www.davidjoyner.net/home/wp-content/uploads/2022/06/3491140.3528283.pdf" target="_blank">https://www.davidjoyner.net/home/wp-content/uploads/2022/06/3491140.3528283.pdf</a>
+<li>
+</ul>
+<br>
+
+It also shows 22% of students withdraw from a course on average. So in a group of 5 students, one will be gone in the middle of semester. Also, another important observation from the paper is approx. half of the "dropout" students do so without earning a B or above in single class. 93% of the dropouts happen before completing 5 courses.
+<br><br>
+
+These are the students who either didn't have competence to keep up with the course work or couldn't commit time due to competing priorities. Either way, as team mates in a group project, they are disaster and ruin the experience for other students so horrifically. 
+<br><br>
+
+<h3>Example</h3>
+
+There was a public reddit post from a student taking cs7646 (ML4T) asking “Hi, I got an email from TA accusing me of plagiarism. But I only used the code from LLM. Is this not allowed ? What’s the impact on my grade ? How do I get out of this ? ”
+<br><br>
+
+Then, the prof. Joyner replied essentially saying “It was not from TA, it was from me. The syllabus clearly explains NOT to use AI code. My email clearly explains the impact on grade. If you don’t know who the instructor of your class is, if you cannot read syllabus, if you cannot read email, then you most likely violated honor code and aren't even aware of it.”
+<br><br>
+
+Surprisingly there are quite a few clowns like this in the program. It’s great that GT give them opportunity to enroll. But I really really don’t want them ruining the experience for others via group projects. 
+<br><br>
+
+Unfortunately, I've had team mates like this, and it was a dreadful pain. They are clueless and even attempt to dump AI-generated code/text to the team repository/reports. 
+<br><br>
+
+<h3>Potential Solutions</h3>
+
+<ul>
+<li>
+Get rid of group projects, or at least give an option to do solo. In fact, some courses allow solo option. (isye6644 SIM, isye7406 DMSL, isye6740 CDA)
+</li>
+
+<li>
+Allow students to enroll in courses with group project only after they completed 5 courses.
+</li>
+
+</ul>
+<br>
+
+I understand some say at the graduation that the group projects were the best moment of their OMSCS/OMSA experience. They made life time friends. I’m happy for them. But for many others, the group projects are the worst part of their entire academic journey.
+
+    </section>
+
+<br><hr><section class="footer">&copy; etlq - All Rights Reserved</section>
+
+</main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initial theme                                                                                                                                              
+    if (savedTheme) {
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      document.body.classList.toggle('dark', prefersDark);
+    }
+
+    updateButton();
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      const theme = document.body.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      localStorage.setItem('theme', theme);
+      updateButton();
+    });
+
+    function updateButton() {
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light'
+        : '🌙 Dark';
+    }
+  </script>
+
+</body>
+</html>
