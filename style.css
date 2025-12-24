@@ -162,7 +162,7 @@ pre {
 
 /* Lists */
 ul {
-  padding-left: 25px;
+  padding-left: 24px;
   list-style-type: disc;
 }
 
@@ -171,7 +171,7 @@ ol {
 }
 
 ul ul {
-  padding-left: 17px;
+  padding-left: 15px;
   list-style-type: circle;
 }
 
