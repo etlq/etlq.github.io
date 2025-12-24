@@ -122,7 +122,32 @@ body {
 
 .card h2 {
   font-size: 19.5px;
-  margin-bottom: 3px;
+  margin-bottom: 10px;
+
+  /* Underline (bottom border) style */
+  border-bottom: 1.1px solid #a6cbf7; /* Adjust thickness and color as desired */
+  padding-bottom: 1px; /* Space between text and underline */
+  padding-left: 8px;
+
+  /* Add some overall padding/margin for better visual appeal */
+  padding-top: 0px;
+  display: block; /* Ensures the borders span the full width */
+}
+
+.card h2::before {
+    content: "";
+    display: inline-block;
+
+    width: 7px;  /* Thickness of the bar */
+    height: 20.5px; /* Height of the bar (matches font-size) */
+    background-color: #4e8ef7; /* Darker blue color */
+
+    margin-right: 13px; /* Space between the bar and the text */
+    padding-bottom: 0px;
+    padding-top: 0px;
+
+    /* Alignment: Ensures the bar sits correctly next to the text */
+    vertical-align: middle;
 }
 
 .card h3 {
