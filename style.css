@@ -108,7 +108,7 @@ body {
 .card {
   background: #ffffff;
   border-radius: 8px;
-  padding: 22px 28px 28px;
+  padding: 22px 26px 28px;
   margin-bottom: 3px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.08);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
