@@ -1,1 +1,4 @@
+User-agent: *
+Disallow:
+
 Sitemap: https://etlq.github.io/sitemap.xml
