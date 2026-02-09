@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- google adsense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9538560944966473"
+     crossorigin="anonymous"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W3N6GZK3FP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-W3N6GZK3FP');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="Privacy Policy at ETLQ" name='description'/>
+  <title>Privacy Policy at ETLQ</title>
+  <meta property="og:url" content="https://etlq.github.io/" />
+  <meta property="og:site_name" content="My Review of Everything" />
+  <meta name="google-adsense-account" content="ca-pub-9538560944966473">
+  <!-- this "/style.css" specifies the root of the domain -->
+  <link rel="stylesheet" href="/style.css" />   
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <div class="header-inner">
+    <!--  <a href="#" class="back">←</a> -->
+
+      <span class="header-title"><a href="https://etlq.github.io/">My review of everything</a></span>
+
+      <nav class="menu">
+    <!-- 
+        <a href="#admission">Admission</a> 
+        <a href="#courses">Courses</a> 
+        <a href="#thoughts">Thoughts</a> 
+    -->
+      <button id="themeToggle" class="theme-toggle">
+        🌙 Dark
+      </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="courses">
+
+<h1>Privacy Policy</h1>
+
+<br>Last updated: February 8, 2026
+
+At this website (ETLQ : <a href ="https://etlq.github.io/">https://etlq.github.io/</a>), we respect your privacy and are committed to protecting any information you may provide while using this website.
+<br><br>
+
+This Privacy Policy document outlines the types of information that are collected and recorded by ETLQ and how we use it
+<br><br>
+
+<hr>
+<h2>Information We Collect</h2>
+
+ETLQ does not require users to provide personal information to browse the website.
+<br><br>
+
+However, like many websites, we may collect non-personally identifiable information automatically, including but not limited to:
+
+<ul>
+  <li>Browser type </li>
+  <li>Internet Protocol (IP) address </li>
+  <li>Pages visited </li>
+  <li>Date and time of visits </li>
+  <li>Referring/exit pages </li>
+</ul>
+
+This information is used solely to analyze trends, administer the site, and improve user experience.
+
+<hr>
+<h2>Cookies and Web Beacons</h2>
+
+ETLQ may use cookies to store information about visitors’ preferences and to optimize the user experience by customizing our web page content based on visitors’ browser type or other information.
+<br><br>
+
+You can choose to disable cookies through your individual browser options.
+
+<hr>
+<h2>How We Use Your Information</h2>
+
+Any information collected is used to:
+<ul>
+  <li>Operate and maintain the website </li>
+  <li>Improve content quality and usability </li>
+  <li>Understand how visitors use the site </li>
+</ul>
+
+We do not sell, trade, or rent users’ personal identification information.
+
+<hr>
+<h2>Google AdSense and Third-Party Advertising</h2>
+
+Some of the ads on ETLQ may be served by Google AdSense, a third-party advertising partner.
+<br><br>
+
+Google uses cookies (including the DoubleClick cookie) to serve ads to users based on their visit to this and other websites.
+<br><br>
+
+Users may opt out of personalized advertising by visiting Google’s Ads Settings: <br>
+<a href="https://adssettings.google.com" target="_blank">https://adssettings.google.com</a>
+<br><br>
+
+Third-party ad servers or networks use technologies like cookies, JavaScript, or Web Beacons in their respective advertisements and links that appear on ETLQ. These are sent directly to users’ browsers. They automatically receive your IP address when this occurs.
+<br><br>
+
+ETLQ has no control over these cookies that are used by third-party advertisers.
+
+<hr>
+<h3>Your Consent</h3>
+
+By using our website, you hereby consent to our Privacy Policy and agree to its terms.
+
+<hr>
+<h3>Contact Us</h3>
+
+If you have any questions about this Privacy Policy, please contact us at: <br>
+<a href="https://www.reddit.com/user/etlx/" target="_blank">https://www.reddit.com/user/etlx/</a>
+
+
+    </section>
+
+<br><hr><section class="footer">&copy; etlq - All Rights Reserved</section>
+
+</main>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    // Initial theme                                                                                                                                              
+    if (savedTheme) {
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      document.body.classList.toggle('dark', prefersDark);
+    }
+
+    updateButton();
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+
+      const theme = document.body.classList.contains('dark')
+        ? 'dark'
+        : 'light';
+
+      localStorage.setItem('theme', theme);
+      updateButton();
+    });
+
+    function updateButton() {
+      toggle.textContent = document.body.classList.contains('dark')
+        ? '☀️ Light'
+        : '🌙 Dark';
+    }
+  </script>
+
+</body>
+</html>
